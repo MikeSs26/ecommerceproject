@@ -4,6 +4,8 @@ import { SelectComponent } from '../select/select.component';
 import { CarritoComponent } from '../carrito/carrito.component';
 import { MenuComponent } from '../menu/menu.component';
 import { LoginComponent } from '../login/login.component';
+import { BarraBusquedaComponent } from '../barra-busqueda/barra-busqueda.component';
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -18,7 +20,8 @@ import { LoginComponent } from '../login/login.component';
     SelectComponent,
     CarritoComponent,
     MenuComponent,
-    LoginComponent
+    LoginComponent,
+    BarraBusquedaComponent
     
     ]
 })

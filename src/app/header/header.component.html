@@ -1,38 +1,27 @@
-<ion-header translucid>
+<ion-header translucent style="position: fixed; top: 0; width: 100%;">
   <ion-toolbar>
-    <table style="width: 100%;">
+    <table style="width: 100%; border-collapse: collapse;">
       <tr>
-        <td style="width: 30%; justify-content: center;"></td>
-        <td style="width: 50%;"></td>
-        <td style="width: 5%; text-align: left;"></td>
-        <td style="width: 5%; text-align: right;"></td>      
-      </tr>
-      <tr>
-        <td>
+        <td style="width: 10%; text-align: center;">
           <ion-title>
-            <img src='assets/images/etech-negro.png' alt="logo" style="max-width: 15%; max-height: 10%;"> 
+            <img src='assets/images/etech-negro.png' alt="logo" style="max-width: 50%; max-height: 50%;"> 
           </ion-title>
-          
         </td>
-        <td>
-            <app-select></app-select>
-          
+        <td style="width: 30%; text-align: center;">
+          <app-select></app-select>
         </td>
-        <td>
-          <div class="ion-text-end">
-            <app-carrito></app-carrito>
-          </div>
+        <td style="width: 15%; text-align: left;">
+          <app-barra-busqueda></app-barra-busqueda>
         </td>
-        <td>
-          <div class="ion-text-end">
+        <td style="width: 5%; text-align: left;">
+          <app-carrito></app-carrito>
+        </td>
+        <td style="width: 5%; text-align: right;">
           <app-login></app-login>
-        </div>
         </td>
       </tr>
     </table>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <!-- Contenido de la página aquí -->
-</ion-content>
+
