@@ -11,11 +11,6 @@ import {
 })
 export class FondoComponent  implements OnInit {
 
-  imageUrl: string = 'https://drive.google.com/uc?export=view&id=10PeUuNFTrWBpkB3RHWAKO9huLQZPLq2b';
-
-  ErrorImage() {
-    this.imageUrl = 'assets/images/universo.jpg';}
-
   constructor() { }
 
   ngOnInit() {}

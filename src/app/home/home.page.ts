@@ -4,6 +4,8 @@ import { HeaderComponent } from '../header/header.component';
 import { SelectComponent } from '../select/select.component';
 import { FondoComponent } from '../fondo/fondo.component';
 import { MenuComponent } from '../menu/menu.component';
+import { FooterComponent } from '../footer/footer.component';
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -14,7 +16,8 @@ import { MenuComponent } from '../menu/menu.component';
     IonContent, 
     FondoComponent,
    IonContent, 
-   MenuComponent
+   MenuComponent,
+   FooterComponent
 , ],
 })
 export class HomePage {

@@ -9,6 +9,7 @@ import { ProductsPage } from './products/products.page';
 import { CarritoComponent } from './carrito/carrito.component';
 import { LoginComponent } from './login/login.component';
 import { MenuComponent } from './menu/menu.component'; 
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -25,6 +26,7 @@ import { MenuComponent } from './menu/menu.component';
     LoginComponent,
     MenuComponent
      ]})
+     
 export class AppComponent {
   constructor() {}
 }
