@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { IonFooter, IonToolbar, IonTitle } from '@ionic/angular/standalone';
+import { IonFooter, IonToolbar, IonTitle, IonSegmentButton , IonSegment} from '@ionic/angular/standalone';
+
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
@@ -8,10 +9,13 @@ import { IonFooter, IonToolbar, IonTitle } from '@ionic/angular/standalone';
   imports: [
     IonFooter,
     IonToolbar,
-    IonTitle
-    ]
+    IonTitle,
+    IonSegmentButton,
+    IonSegment
+  ]
 })
-export class FooterComponent  implements OnInit {
+export class FooterComponent implements OnInit {
+ 
 
   constructor() { }
 

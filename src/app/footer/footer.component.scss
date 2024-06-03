@@ -1,12 +1,30 @@
-ion-footer {
-    background-color: #f6f6f6;
-    ion-toolbar {
-        --background: #a2fdf2; /* Color de fondo del toolbar */
-        color: rgb(71, 82, 241); /* Color del texto del toolbar */
-      }
-    ion-title {
-      text-align: center;
-      color: #333;
-    }
-  }
+.custom-footer {
+  --background: black;
+  --ion-toolbar-background: black;
+  --ion-text-color: white;
+  
+}
+
+.custom-footer ion-segment-button {
+  color: white;
+  font-size: 10px;
+  padding: 0px; 
+  
+}
+
+.custom-footer ion-segment-button.ion-activated {
+  background: #fafafb;
+}
+
+.custom-footer ion-segment-button::part(indicator) {
+  background: white;
+}
+
+.footer-title {
+  color: white; 
+  text-align: center; 
+  font-size: 16px;
+}
+
+
   

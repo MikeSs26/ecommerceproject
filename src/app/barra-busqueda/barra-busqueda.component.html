@@ -1,0 +1,4 @@
+<ion-searchbar [(ngModel)]="QueryBusqueda" (ionInput)="onSearch()"></ion-searchbar>
+<ion-list>
+  <ion-item *ngFor="let item of ProductosFiltrados">{{ item }}</ion-item>
+</ion-list>
