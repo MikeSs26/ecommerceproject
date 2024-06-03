@@ -1,0 +1,11 @@
+<div class="menu">
+  <button ion-button (click)="toggleMenu()">Toggle Menu</button>
+  <div class="menu-content" *ngIf="isOpen">
+      <app-menu>
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </app-menu>
+      <button ion-button (click)="toggleMenu()">Toggle Menu</button>
+  </div>
+</div>

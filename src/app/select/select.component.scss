@@ -1,0 +1,20 @@
+.seleccionable {
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  margin-bottom: 0px;
+}
+
+.centrado {
+  margin-right: relative;
+  
+}
+.select-pequeno {
+  font-size: 20px; 
+  
+}
+
+.seleccionable ion-label {
+  --color: white; 
+}
+

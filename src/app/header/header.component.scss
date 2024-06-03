@@ -1,0 +1,12 @@
+.carrito {
+  display: flex;
+  margin-left: 0%;
+}
+.logo {
+  background-image: src("assets/images/etech-negro.png");
+ 
+}
+
+ion-toolbar {
+  --ion-background-color: rgb(12, 11, 11); /* Cambia el color de fondo a negro */
+}
