@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IonHeader, IonToolbar, IonTitle } from '@ionic/angular/standalone';
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
