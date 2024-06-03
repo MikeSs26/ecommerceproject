@@ -4,7 +4,11 @@ import { HeaderComponent } from './header/header.component';
 import { SelectComponent } from './select/select.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomePage } from './home/home.page';
-import { Router } from '@angular/router';
+import { FondoComponent } from './fondo/fondo.component';
+import { ProductsPage } from './products/products.page';
+import { CarritoComponent } from './carrito/carrito.component';
+import { LoginComponent } from './login/login.component';
+import { MenuComponent } from './menu/menu.component'; 
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -14,9 +18,13 @@ import { Router } from '@angular/router';
     HeaderComponent,
     FooterComponent,
     IonContent,
-    HomePage
-  ],
-})
+    HomePage,
+    FondoComponent, 
+    ProductsPage, 
+    CarritoComponent,
+    LoginComponent,
+    MenuComponent
+     ]})
 export class AppComponent {
   constructor() {}
 }

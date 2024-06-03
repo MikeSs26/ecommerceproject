@@ -1,9 +1,11 @@
-import { Component, Input, OnInit, } from '@angular/core';
+import { Component, ViewChild, OnInit, } from '@angular/core';
 import {
   IonSelect,
   IonSelectOption,
   IonLabel,
-  IonItem } from '@ionic/angular/standalone';
+  IonItem,
+  IonList,
+  } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-select',
@@ -13,7 +15,8 @@ import {
   imports: [IonLabel,
     IonItem,
     IonSelect,
-    IonSelectOption,
+    IonSelectOption, 
+    IonList,
     ]
 })
 export class SelectComponent  implements OnInit {
@@ -21,6 +24,16 @@ export class SelectComponent  implements OnInit {
   constructor() { }
 
   ngOnInit() {}
+
+  @ViewChild('select1') select1!: IonSelect;
+
+  openSelect(select: IonSelect) {
+    select.open();
+  }
+
+  closeSelect(select: IonSelect) {
+    new select.ionDismiss();
+  }
 
   redireccionar(opcionSeleccionada: string) {
     switch (opcionSeleccionada) {
@@ -37,4 +50,5 @@ export class SelectComponent  implements OnInit {
         break;
     }
   }
+  
 }

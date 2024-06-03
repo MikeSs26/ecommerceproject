@@ -1,12 +1,20 @@
-.contenedor-pagina {
+.seleccionable {
   display: flex; 
   justify-content: center; 
-  align-items: center; 
-
+  align-items: center;
+  margin-bottom: 0px;
 }
-.item-centrado {
-  max-width: 300px;
+
+.centrado {
+  margin-right: relative;
+  
 }
 .select-pequeno {
-  font-size: 16px; 
+  font-size: 20px; 
+  
 }
+
+.seleccionable ion-label {
+  --color: white; 
+}
+
