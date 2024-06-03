@@ -7,23 +7,23 @@
 
 .custom-footer ion-segment-button {
   color: white;
-  font-size: 10px; /* Ajusta el tamaño del texto */
-  padding: 0px; /* Ajusta el relleno interno del botón */
+  font-size: 10px;
+  padding: 0px; 
   
 }
 
 .custom-footer ion-segment-button.ion-activated {
-  background: #333; /* Color de fondo cuando está activo */
+  background: #fafafb;
 }
 
 .custom-footer ion-segment-button::part(indicator) {
-  background: white; /* Color de la barra debajo de los botones */
+  background: white;
 }
 
 .footer-title {
-  color: white; /* Color del texto del título */
-  text-align: center; /* Centrar el título */
-  font-size: 16px; /* Ajusta el tamaño del título */
+  color: white; 
+  text-align: center; 
+  font-size: 16px;
 }
 
 
