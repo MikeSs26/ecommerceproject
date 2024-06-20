@@ -1,16 +1,18 @@
 <ion-header translucent style="position: fixed; top: 0; width: 100%;">
   <ion-toolbar>
-    <table style="width: 100%; border-collapse: collapse;">
+    <table style="width: 100%; border-collapse: collapse">
       <tr>
-        <td style="width: 10%; text-align: center;">
-          <ion-title>
-            <img src='assets/images/etech-negro.png' alt="logo" style="max-width: 50%; max-height: 50%;"> 
+        <th style="width: 10%; text-align: center;">
+            <div class="carrito">
+            <ion-title>
+            <img src='assets/images/etech-negro.png' alt="logo" [routerLink]="['/carrito']" routerLinkActive="router-link-active">
           </ion-title>
-        </td>
+        </div>
+        </th>
         <td style="width: 30%; text-align: center;">
           <app-select></app-select>
         </td>
-        <td style="width: 15%; text-align: center; vertical-align:bottom">
+        <td style="width: 15%; text-align: center; vertical-align:center">
           <app-barra-busqueda></app-barra-busqueda>
         </td>
         <td style="width: 5%; text-align: left;">

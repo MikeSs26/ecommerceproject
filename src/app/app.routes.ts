@@ -14,9 +14,5 @@ export const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full',
   },
-  {
-    path: 'login-page',
-    loadComponent: () => import('./login-page/login-page.page').then( m => m.LoginPagePage)
-  },
  
 ];
