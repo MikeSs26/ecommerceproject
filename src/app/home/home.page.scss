@@ -1,0 +1,23 @@
+ion-content {
+    --background: transparent;
+    position: relative;
+    z-index: 1;
+    color: white; /* Cambia el color según tu fondo para mejor legibilidad */
+  }
+  
+  .section {
+    padding: 86px;
+    margin: 16px;
+    border-radius: 8px;
+    color: #000; /* Ajusta el color del texto si es necesario */
+    background: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente por defecto */
+  }
+  
+  .section1, .section4 {
+    background: rgb(41, 41, 41); /* Fondo sólido */
+  }
+  
+  .section2, .section3 {
+    background: transparent;
+  }
+  
