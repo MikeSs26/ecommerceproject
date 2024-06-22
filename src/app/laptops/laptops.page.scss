@@ -1,0 +1,26 @@
+ion-content {
+    --padding-top: 86px;
+}
+
+
+ion-col {
+    background-color: rgb(12, 11, 11);
+    border: solid 1px #fff;
+    color: #fff;
+    text-align: center;
+  }
+
+
+  .background-image {
+    --background: url(../../assets/images/universo.jpg) no-repeat center center / cover;
+  
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5); // Ajusta el color y la opacidad según necesites
+    }
+  }

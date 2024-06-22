@@ -5,6 +5,7 @@ import { CarritoComponent } from '../carrito/carrito.component';
 import { MenuComponent } from '../menu/menu.component';
 import { LoginComponent } from '../login/login.component';
 import { BarraBusquedaComponent } from '../barra-busqueda/barra-busqueda.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -27,7 +28,11 @@ import { BarraBusquedaComponent } from '../barra-busqueda/barra-busqueda.compone
 })
 export class HeaderComponent  implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) {  }
+
+  goToHome(){
+    this.router.navigate(['/home'])
+  }
 
   ngOnInit() {}
 

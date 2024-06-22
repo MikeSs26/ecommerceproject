@@ -13,10 +13,12 @@ export const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full',
-  },  {
+  },
+  {
     path: 'laptops',
     loadComponent: () => import('./laptops/laptops.page').then( m => m.LaptopsPage)
   },
+
 
  
 ];

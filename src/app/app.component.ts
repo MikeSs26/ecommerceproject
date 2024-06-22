@@ -10,6 +10,8 @@ import { CarritoComponent } from './carrito/carrito.component';
 import { LoginComponent } from './login/login.component';
 import { MenuComponent } from './menu/menu.component'; 
 import { BarraBusquedaComponent } from './barra-busqueda/barra-busqueda.component';
+import { LaptopsPage } from './laptops/laptops.page';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -25,7 +27,10 @@ import { BarraBusquedaComponent } from './barra-busqueda/barra-busqueda.componen
     CarritoComponent,
     LoginComponent,
     MenuComponent,
-    BarraBusquedaComponent
+    BarraBusquedaComponent,
+    LaptopsPage,
+    RouterLink,
+    RouterLinkActive,
      ]})
      
 export class AppComponent {
