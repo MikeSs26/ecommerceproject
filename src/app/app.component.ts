@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { IonApp, IonRouterOutlet,IonContent} from '@ionic/angular/standalone';
-import { HeaderComponent } from './header/header.component';
+import { HeaderComponent } from './components/header/header.component';
 import { SelectComponent } from './select/select.component';
-import { FooterComponent } from './footer/footer.component';
+import { FooterComponent } from './components/footer/footer.component';
 import { HomePage } from './home/home.page';
 import { FondoComponent } from './fondo/fondo.component';
 import { ProductsPage } from './products/products.page';

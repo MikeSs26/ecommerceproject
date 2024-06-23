@@ -1,44 +1,34 @@
-import { Component } from '@angular/core';
-import { IonApp, 
-  IonRouterOutlet, 
-  IonHeader,
-  IonToolbar,
-  IonTitle,
-  IonMenu,
-  IonMenuButton,
-  IonButton,
-  IonButtons,
-  IonIcon,
-  IonSegment,
-  IonSegmentButton,
-  IonLabel,
-  IonList,
-  IonItem,
-  IonContent
- } from '@ionic/angular/standalone';
+import { Component, OnInit } from '@angular/core';
+import { IonHeader, IonToolbar, IonTitle,IonContent, IonButtons,IonMenuButton } from '@ionic/angular/standalone';
+import { SelectComponent } from '../../select/select.component';
+import { CarritoComponent } from '../../carrito/carrito.component';
+import { MenuComponent } from '../../menu/menu.component';
+import { LoginComponent } from '../../login/login.component';
+import { BarraBusquedaComponent } from '../../barra-busqueda/barra-busqueda.component';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
   standalone: true,
-  imports: [IonApp, 
-    IonRouterOutlet, 
-    IonHeader, 
-    IonToolbar, 
+  imports: [
+    IonHeader ,
+    IonToolbar,
     IonTitle, 
-    IonMenu, 
-    IonMenuButton, 
-    IonButton, 
-    IonButtons, 
-    IonIcon,
-    IonSegment,
-    IonSegmentButton,
-    IonLabel,
-    IonList,
-    IonItem,
-    IonContent],
+    IonContent,
+    IonButtons,
+    SelectComponent,
+    CarritoComponent,
+    MenuComponent,
+    LoginComponent,
+    BarraBusquedaComponent
+    
+    ]
 })
-export class HeaderComponent {
+export class HeaderComponent  implements OnInit {
+
   constructor() { }
+
+  ngOnInit() {}
+
 }

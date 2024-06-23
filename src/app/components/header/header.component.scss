@@ -1,8 +1,12 @@
-.headerToolbar {
-    background-color: #171217;
+.carrito {
+  display: flex;
+  margin-left: 0%;
+}
+.logo {
+  background-image: src("assets/images/etech-negro.png");
+ 
 }
 
-.headerTitle {
-    margin-left: 5%;
-    font-size: 50px;
+ion-toolbar {
+  --ion-background-color: rgb(12, 11, 11);
 }
