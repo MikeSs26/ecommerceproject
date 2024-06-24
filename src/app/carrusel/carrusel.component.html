@@ -1,42 +1,29 @@
-<div class="control-container">
-  <ejs-carousel>
-    <e-carousel-items>
-      <!-- Carrusel Ítem para Componentes de Gaming -->
-      <e-carousel-item>
-        <ng-template #template>
-          <figure class="img-container">
-            <img src="path_to_gaming_components_image.jpg" alt="Gaming Components" style="height:100%;width:100%;" />
-            <figcaption class="img-caption">Componentes de Gaming</figcaption>
-          </figure>
-        </ng-template>
-      </e-carousel-item>
-      <!-- Carrusel Ítem para Laptops Gaming -->
-      <e-carousel-item>
-        <ng-template #template>
-          <figure class="img-container">
-            <img src="path_to_gaming_laptop_image.jpg" alt="Gaming Laptop" style="height:100%;width:100%;" />
-            <figcaption class="img-caption">Laptops Gaming</figcaption>
-          </figure>
-        </ng-template>
-      </e-carousel-item>
-      <!-- Carrusel Ítem para PCs Gaming -->
-      <e-carousel-item>
-        <ng-template #template>
-          <figure class="img-container">
-            <img src="path_to_gaming_pc_image.jpg" alt="PC Gaming" style="height:100%;width:100%;" />
-            <figcaption class="img-caption">PCs Gaming</figcaption>
-          </figure>
-        </ng-template>
-      </e-carousel-item>
-      <!-- Carrusel Ítem para Teléfonos Gaming -->
-      <e-carousel-item>
-        <ng-template #template>
-          <figure class="img-container">
-            <img src="path_to_gaming_phone_image.jpg" alt="Gaming Phone" style="height:100%;width:100%;" />
-            <figcaption class="img-caption">Teléfonos Gaming</figcaption>
-          </figure>
-        </ng-template>
-      </e-carousel-item>
-    </e-carousel-items>
-  </ejs-carousel>
+<div>
+  <ion-grid>
+    <ion-row>
+      <ion-col >
+        <ion-card>
+          <img src="assets/images/carruselmages/setup.jpg" alt="Placeholder Image"/>
+          <ion-card-header>
+            <ion-card-title>PC's Gaming</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Descubre la variedad de PC's Gaming que tenemos para ti.
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+  
+      <ion-col>
+        <ion-card>
+          <img src="assets/images/carruselmages/laptop.jpg" alt="Placeholder Image"/>
+          <ion-card-header>
+            <ion-card-title>Laptops Gaming</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Si te gusta lo portatil, echa un vistazo a las laptop gaming que tenemos para ofrecer.
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </div>

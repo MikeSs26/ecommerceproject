@@ -30,6 +30,7 @@
     "@syncfusion/ej2-angular-navigations": "^26.1.38",
     "ionicons": "^7.2.1",
     "rxjs": "~7.8.0",
+    "swiper": "^7.4.1",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.2"
   },

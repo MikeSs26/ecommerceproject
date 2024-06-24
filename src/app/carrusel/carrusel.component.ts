@@ -1,13 +1,15 @@
-import { Component, ViewEncapsulation } from '@angular/core';
-import { CarouselModule } from '@syncfusion/ej2-angular-navigations';
+import { Component } from '@angular/core';
+import { IonicModule } from '@ionic/angular';
+import { SwiperStandaloneModule } from '../Modules/swiper-standalone/swiper-standalone.module';
 
 @Component({
   selector: 'app-carrusel',
   templateUrl: './carrusel.component.html',
   styleUrls: ['./carrusel.component.scss'],
   standalone: true,
-  imports: [CarouselModule],
+  imports: [IonicModule, SwiperStandaloneModule],
 })
 export class CarruselComponent {
+
   constructor() { }
 }
