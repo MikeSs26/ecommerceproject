@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
-import {IonItem} from '@ionic/angular/standalone';
 @Component({
   selector: 'app-carrito',
   templateUrl: './carrito.component.html',
   styleUrls: ['./carrito.component.scss'],
   standalone: true,
   imports: [
-    IonItem
     ]
 })
 export class CarritoComponent {

@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
-import { IonHeader, IonToolbar, IonTitle,IonContent, IonButtons} from '@ionic/angular/standalone';
+import { IonHeader, IonToolbar, IonTitle, IonContent, IonButtons} from '@ionic/angular/standalone';
 import { SelectComponent } from '../select/select.component';
 import { CarritoComponent } from '../carrito/carrito.component';
 import { MenuComponent } from '../menu/menu.component';
 import { LoginComponent } from '../login/login.component';
 import { BarraBusquedaComponent } from '../barra-busqueda/barra-busqueda.component';
-import {RouterLink, RouterLinkActive } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
+
 
 
 @Component({
@@ -25,8 +27,9 @@ import {RouterLink, RouterLinkActive } from '@angular/router';
     LoginComponent,
     BarraBusquedaComponent, 
     RouterLink, 
-    RouterLinkActive
-    
+    RouterLinkActive, 
+    CommonModule, 
+    RouterModule
     ]
 })
 export class HeaderComponent  {
