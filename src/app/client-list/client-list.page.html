@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Client List
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let client of clients">
+      {{ client.name }} - {{ client.email }} <!-- Adaptar según la estructura de tu objeto cliente -->
+    </ion-item>
+  </ion-list>
+</ion-content>

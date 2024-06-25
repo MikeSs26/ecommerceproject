@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { Component, ViewChild, OnInit, } from '@angular/core';
 import {
   IonSelect,
@@ -16,7 +17,7 @@ import {
     IonItem,
     IonSelect,
     IonSelectOption, 
-    IonList,
+    IonList
     ]
 })
 export class SelectComponent  implements OnInit {

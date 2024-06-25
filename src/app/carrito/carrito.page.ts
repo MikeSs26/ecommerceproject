@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-carrito',
@@ -17,7 +18,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
     CommonModule, 
     FormsModule, 
     RouterLink, 
-    RouterLinkActive,
+    RouterLinkActive
   ]
 })
 export class CarritoPage {
