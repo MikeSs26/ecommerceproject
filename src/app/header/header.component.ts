@@ -5,7 +5,7 @@ import { CarritoComponent } from '../carrito/carrito.component';
 import { MenuComponent } from '../menu/menu.component';
 import { LoginComponent } from '../login/login.component';
 import { BarraBusquedaComponent } from '../barra-busqueda/barra-busqueda.component';
-import { RouterLink, RouterLinkActive, RouterModule } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 
@@ -34,6 +34,9 @@ import { CommonModule } from '@angular/common';
 })
 export class HeaderComponent  {
 
-  constructor() { }
+  constructor(private router: Router) {}
 
+  navigateToLogin() {
+    this.router.navigateByUrl('/loginuser');
+  }
 }
