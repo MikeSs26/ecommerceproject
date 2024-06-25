@@ -1,192 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Productos</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
-    </head>  
-    <body>     
 <ion-content class="productos">   
   <h1>PRODUCTOS</h1>
   <div class="contenedor">
     <!-- Listita Productos :D-->
-    <div class="contenedor-item">
-    <div class="item">
-      <span class="titulo">Articulo 1</span>
-      <img src="assets/images/carrito.png" alt="" class="img-item">
-      <span class="precio">$150.00</span>
-      <ion-button>Agregar al Carrito</ion-button>
-    </div>
-  
-  <div class="item">
-    <span class="titulo">Articulo 2</span>
-    <img src="assets/images/carrito.png" alt="" class="img-item">
-    <span class="precio">$2.500.00</span>
-    <ion-button>Agregar al Carrito</ion-button>
-  </div>
-  <div class="item">
-    <span class="titulo">Articulo 3</span>
-    <img src="assets/images/carrito.png" alt="" class="img-item">
-    <span class="precio">$1.050.00</span>
-    <ion-button>Agregar al Carrito</ion-button>
-  </div>
-  <div class="item">
-    <span class="titulo">Articulo 4</span>
-    <img src="assets/images/carrito.png" alt="" class="img-item">
-    <span class="precio">$1.050.00</span>
-    <ion-button>Agregar al Carrito</ion-button>
-  </div>
-  <div class="item">
-    <span class="titulo">Articulo 5</span>
-    <img src="assets/images/carrito.png" alt="" class="img-item">
-    <span class="precio">$1.050.00</span>
-    <ion-button>Agregar al Carrito</ion-button>
-  </div>
-  <div class="item">
-    <span class="titulo">Articulo 6</span>
-    <img src="assets/images/carrito.png" alt="" class="img-item">
-    <span class="precio">$1.050.00</span>
-    <ion-button>Agregar al Carrito</ion-button>
-  </div>
-  <div class="item">
-    <span class="titulo">Articulo 7</span>
-    <img src="assets/images/carrito.png" alt="" class="img-item">
-    <span class="precio">$1.050.00</span>
-    <ion-button>Agregar al Carrito</ion-button>
-  </div>
-  <div class="item">
-    <span class="titulo">Articulo 8</span>
-    <img src="assets/images/carrito.png" alt="" class="img-item">
-    <span class="precio">$1.050.00</span>
-    <ion-button>Agregar al Carrito</ion-button>
-  </div>
-  <div class="item">
-    <span class="titulo">Articulo 9</span>
-    <img src="assets/images/carrito.png" alt="" class="img-item">
-    <span class="precio">$1.050.00</span>
-    <ion-button>Agregar al Carrito</ion-button>
-  </div>
-  <div class="item">
-    <span class="titulo">Articulo 10</span>
-    <img src="assets/images/carrito.png" alt="" class="img-item">
-    <span class="precio">$1.050.00</span>
-    <ion-button>Agregar al Carrito</ion-button>
-  </div>
-  <div class="item">
-    <span class="titulo">Articulo 11</span>
-    <img src="assets/images/carrito.png" alt="" class="img-item">
-    <span class="precio">$1.050.00</span>
-    <ion-button>Agregar al Carrito</ion-button>
-  </div>
-  <div class="item">
-    <span class="titulo">Articulo 12</span>
-    <img src="assets/images/carrito.png" alt="" class="img-item">
-    <span class="precio">$1.050.00</span>
-    <ion-button>Agregar al Carrito</ion-button>
-  </div>
-  </div>
-  
-
-  <!-- Carrito -->
-  <div class="carrito">
-  <div class="carrito-header">
-  <h4>Tu Carrito</h4>
-  </div>
-        <div class="carrito-item">
-        <img src="assets/images/carrito.png" alt="" width="80px">
-              <div class="carrito-item-detalles">
-              <span class="titulo">Articulo 1</span>
-              <div class="selector-cantidad">
-                <!-- iconos-->
-                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
-                  <path d="M25 42C15.6 42 8 34.4 8 25C8 15.6 15.6 8 25 8C34.4 8 42 15.6 42 25C42 34.4 34.4 42 25 42ZM25 10C16.7 10 10 16.7 10 25C10 33.3 16.7 40 25 40C33.3 40 40 33.3 40 25C40 16.7 33.3 10 25 10Z" fill="white"/>
-                  <path d="M16 24H34V26H16V24Z" fill="white"/>
-                  </svg>
-                <input type="text" value="1" class="carrito-item-cantidad" disabled>
-                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
-                  <path d="M25 42C15.6 42 8 34.4 8 25C8 15.6 15.6 8 25 8C34.4 8 42 15.6 42 25C42 34.4 34.4 42 25 42ZM25 10C16.7 10 10 16.7 10 25C10 33.3 16.7 40 25 40C33.3 40 40 33.3 40 25C40 16.7 33.3 10 25 10Z" fill="white"/>
-                  <path d="M16 24H34V26H16V24Z" fill="white"/>
-                  <path d="M24 16H26V34H24V16Z" fill="white"/>
-                </svg> 
-                    <span class="eliminar">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-                        <path d="M31.6667 6.66667H25.8333L24.1667 5H15.8333L14.1667 6.66667H8.33334V10H31.6667M10 31.6667C10 32.5507 10.3512 33.3986 10.9763 34.0237C11.6014 34.6488 12.4493 35 13.3333 35H26.6667C27.5507 35 28.3986 34.6488 29.0237 34.0237C29.6488 33.3986 30 32.5507 30 31.6667V11.6667H10V31.6667Z" fill="white"/>
-                        </svg>
-                    </span>          
-              </div>
-                <span class="carrito-item-precio">$152.00</span>
-              </div>
-              
-        </div>
-
-        <div class="carrito-item">
-          <img src="assets/images/carrito.png" alt="" width="80px">
-                <div class="carrito-item-detalles">
-                <span class="titulo">Articulo 2</span>
-                <div class="selector-cantidad">
-                  <!-- iconos -->
-                  <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
-                    <path d="M25 42C15.6 42 8 34.4 8 25C8 15.6 15.6 8 25 8C34.4 8 42 15.6 42 25C42 34.4 34.4 42 25 42ZM25 10C16.7 10 10 16.7 10 25C10 33.3 16.7 40 25 40C33.3 40 40 33.3 40 25C40 16.7 33.3 10 25 10Z" fill="white"/>
-                    <path d="M16 24H34V26H16V24Z" fill="white"/>
-                    </svg>
-                  <input type="text" value="1" class="carrito-item-cantidad" disabled>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
-                    <path d="M25 42C15.6 42 8 34.4 8 25C8 15.6 15.6 8 25 8C34.4 8 42 15.6 42 25C42 34.4 34.4 42 25 42ZM25 10C16.7 10 10 16.7 10 25C10 33.3 16.7 40 25 40C33.3 40 40 33.3 40 25C40 16.7 33.3 10 25 10Z" fill="white"/>
-                    <path d="M16 24H34V26H16V24Z" fill="white"/>
-                    <path d="M24 16H26V34H24V16Z" fill="white"/>
-                  </svg>  
-                    <span class="eliminar">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-                        <path d="M31.6667 6.66667H25.8333L24.1667 5H15.8333L14.1667 6.66667H8.33334V10H31.6667M10 31.6667C10 32.5507 10.3512 33.3986 10.9763 34.0237C11.6014 34.6488 12.4493 35 13.3333 35H26.6667C27.5507 35 28.3986 34.6488 29.0237 34.0237C29.6488 33.3986 30 32.5507 30 31.6667V11.6667H10V31.6667Z" fill="white"/>
-                        </svg>
-                    </span>           
-                </div>
-                  <span class="carrito-item-precio">$250.00</span>
-                </div>
-                
-          </div>
-
-          <div class="carrito-item">
-            <img src="assets/images/carrito.png" alt="" width="80px">
-                  <div class="carrito-item-detalles">
-                  <span class="titulo">Articulo 3</span>
-                  <div class="selector-cantidad">
-                    <!-- iconos -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
-                      <path d="M25 42C15.6 42 8 34.4 8 25C8 15.6 15.6 8 25 8C34.4 8 42 15.6 42 25C42 34.4 34.4 42 25 42ZM25 10C16.7 10 10 16.7 10 25C10 33.3 16.7 40 25 40C33.3 40 40 33.3 40 25C40 16.7 33.3 10 25 10Z" fill="white"/>
-                      <path d="M16 24H34V26H16V24Z" fill="white"/>
-                      </svg>
-                    <input type="text" value="1" class="carrito-item-cantidad" disabled>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
-                      <path d="M25 42C15.6 42 8 34.4 8 25C8 15.6 15.6 8 25 8C34.4 8 42 15.6 42 25C42 34.4 34.4 42 25 42ZM25 10C16.7 10 10 16.7 10 25C10 33.3 16.7 40 25 40C33.3 40 40 33.3 40 25C40 16.7 33.3 10 25 10Z" fill="white"/>
-                      <path d="M16 24H34V26H16V24Z" fill="white"/>
-                      <path d="M24 16H26V34H24V16Z" fill="white"/>
-                    </svg>   
-                        <span class="eliminar">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-                            <path d="M31.6667 6.66667H25.8333L24.1667 5H15.8333L14.1667 6.66667H8.33334V10H31.6667M10 31.6667C10 32.5507 10.3512 33.3986 10.9763 34.0237C11.6014 34.6488 12.4493 35 13.3333 35H26.6667C27.5507 35 28.3986 34.6488 29.0237 34.0237C29.6488 33.3986 30 32.5507 30 31.6667V11.6667H10V31.6667Z" fill="white"/>
-                            </svg>
-                        </span>            
-                  </div>
-                    <span class="carrito-item-precio">$450.00</span>
-                  </div>
-            </div>
-
-          <div class="carrito-total">
-            <div class="fila">
-              <span class="carrito-precio-total">
-                Su Total es $2.548.00
-              </span>
-            </div>
-            <ion-button class="pagar">Pagar</ion-button>
-          </div>
+    <div class="contenedor-item" *ngFor="let product of products">
+      <div class="item">
+        <span class="titulo">{{product.title}}</span>
+        <img [src]="product.image" alt="" class="img-item">
+        <span class="precio">{{product.price | currency}}</span>
+        <ion-button tabindex="0" (click)="addToCart(product)" (keydown)="handleKeyDown($event, addToCart, product)">Agregar al Carrito</ion-button>
       </div>
     </div>
+
+    <!-- Carrito -->
+    <div class="carrito">
+      <div class="carrito-header">
+        <h4>Tu Carrito</h4>
+      </div>
+      <div class="carrito-item" *ngFor="let item of cartItems">
+        <img src="assets/images/carrito.png" alt="" width="80px">
+        <div class="carrito-item-detalles">
+          <span class="titulo">{{item.title}}</span>
+          <div class="selector-cantidad">
+            <!-- iconos -->
+            <button (click)="decreaseQuantity(item)" (keydown)="handleKeyDown($event, decreaseQuantity, item)">-</button>
+            <input type="text" [value]="item.quantity" class="carrito-item-cantidad" readonly>
+            <button (click)="increaseQuantity(item)" (keydown)="handleKeyDown($event, increaseQuantity, item)">+</button>
+            <button (click)="removeFromCart(item)" (keydown)="handleKeyDown($event, removeFromCart, item)">🗑️</button>          
+          </div>
+          <span class="carrito-item-precio">{{item.price * item.quantity | currency}}</span>
+        </div>
+      </div>
+
+      <div class="carrito-total">
+        <div class="fila">
+          <span class="carrito-precio-total">
+            Su Total es {{ getTotalPrice() | currency }}
+          </span>
+        </div>
+        <ion-button (click)="checkout()" (keydown)="handleKeyDown($event, checkout)">Pagar</ion-button>
+      </div>
+    </div>
+  </div>
 </ion-content>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
-<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
-<script src="app.js"></script> 
-</body>
-</html>
