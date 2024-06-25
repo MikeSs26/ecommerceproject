@@ -1,5 +1,7 @@
-
-<div class="login">
-  <img [src]="imageUrl" alt="Fondo Imagen" (error)="ErrorImage()" />
-</div>
-
+<ion-buttons slot="end">
+  <div class="login">
+    <ion-button (click)="navigateToLogin()">
+      <img [src]="imageUrl" alt="Fondo Imagen" (error)="ErrorImage()" />
+    </ion-button>
+  </div>
+</ion-buttons>
