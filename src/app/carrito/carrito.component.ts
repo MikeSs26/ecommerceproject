@@ -1,10 +1,11 @@
+import { HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 @Component({
   selector: 'app-carrito',
   templateUrl: './carrito.component.html',
   styleUrls: ['./carrito.component.scss'],
   standalone: true,
-  imports: [
+  imports: [ 
     ]
 })
 export class CarritoComponent {

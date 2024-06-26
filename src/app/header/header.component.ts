@@ -7,6 +7,7 @@ import { LoginComponent } from '../login/login.component';
 import { BarraBusquedaComponent } from '../barra-busqueda/barra-busqueda.component';
 import { Router, RouterLink, RouterLinkActive, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 
 

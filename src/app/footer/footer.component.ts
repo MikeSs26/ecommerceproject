@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { IonFooter, IonToolbar, IonTitle, IonSegmentButton , IonSegment} from '@ionic/angular/standalone';
 

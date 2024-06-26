@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { IonContent } from '@ionic/angular/standalone';
+import { HttpClientModule } from '@angular/common/http';
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
