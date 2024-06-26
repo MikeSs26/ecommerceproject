@@ -15,8 +15,8 @@ export const routes: Routes = [
     pathMatch: 'full',
   },
   {
-    path: 'carrito',
-    loadComponent: () => import('./carrito/carrito.page').then( m => m.CarritoPage)
+    path: 'pago',
+    loadComponent: () => import('./pago/pago.page').then( m => m.PagoPage)
   },
   {
     path: 'loginuser',

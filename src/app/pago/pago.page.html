@@ -1,0 +1,58 @@
+<ion-content>
+    <h4>Carrito de Compras</h4>
+    <!-- Metodos de Pago -->
+    <div class="contenedor">
+        <div class="metodos">
+            <form (ngSubmit)="submitPaymentForm()" #paymentForm="ngForm">
+                <ion-item>
+                    <ion-label position="floating">Nombre en la tarjeta</ion-label>
+                    <ion-input name="cardName" ngModel required></ion-input>
+                </ion-item>
+    
+                <ion-item>
+                    <ion-label position="floating">Número de tarjeta</ion-label>
+                    <ion-input name="cardNumber" ngModel required></ion-input>
+                </ion-item>
+    
+                <ion-item>
+                    <ion-label position="floating">Fecha de expiración (MM/YY)</ion-label>
+                    <ion-input name="expiryDate" ngModel pattern="\d{2}/\d{2}" required></ion-input>
+                </ion-item>
+    
+                <ion-item>
+                    <ion-label position="floating">CVV</ion-label>
+                    <ion-input name="cvv" ngModel pattern="\d{3,4}" required></ion-input>
+                </ion-item>
+            </form>
+        </div>
+
+<!-- Carrito -->
+        <div class="carrito">
+            <div class="carrito-item" *ngFor="let item of CarritoService.cartItems">
+            <!-- imagen del producto-->
+            <div class="carrito-item-detalles">
+              <img [src]="item.image" alt="" class="img-item">
+              <span class="titulo">{{item.title}}</span>
+              <div class="selector-cantidad">
+                <!-- cantidad-->
+                 <p>Cantidad: </p>
+                <input type="text" [value]="item.quantity" class="carrito-item-cantidad" readonly>
+              </div>
+              <div>
+                <span class="carrito-item-precio">{{item.price * item.quantity | currency}}</span>
+              </div>
+            </div>
+          </div>
+
+    <!-- Pagar Section -->
+          <div class="carrito-total">
+            <div class="fila">
+              <span class="carrito-precio-total">
+                Su Total es {{ CarritoService.getTotalPrice() | currency }}
+              </span>
+            </div>
+            <ion-button (click)="submitPaymentForm()" (keydown)="handleKeyDown($event, submitPaymentForm)">Pagar</ion-button>
+          </div>  
+    </div>
+</div>
+</ion-content>
