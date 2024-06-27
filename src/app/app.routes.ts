@@ -22,14 +22,10 @@ export const routes: Routes = [
     path: 'loginuser',
     loadComponent: () => import('./loginuser/loginuser.page').then( m => m.LoginuserPage)
   },
-  {
-    path: 'client-list',
-    loadComponent: () => import('./client-list/client-list.page').then( m => m.ClientListPage)
-  },
+  
 
   
   
-
 
 
 ];

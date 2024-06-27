@@ -1,13 +1,9 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-<<<<<<< HEAD
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonButton, IonIcon } from '@ionic/angular/standalone';
-=======
 import { IonContent,  IonTitle, IonToolbar, IonButton, IonIcon } from '@ionic/angular/standalone';
 import { Router } from '@angular/router';
 import {CarritoService} from '../service/carrito.services';
->>>>>>> bb532b18fbd525ef84ebc77886108949d286f673
 
 interface Product {
   title: string;
