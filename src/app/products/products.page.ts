@@ -1,41 +1,62 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonGrid, IonRow, IonCol, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonButton } from '@ionic/angular/standalone';
-import { FooterComponent } from '../components/footer/footer.component';
-import { FondoComponent } from "../fondo/fondo.component";
+import { IonContent,
+  IonHeader,
+  IonTitle,
+  IonToolbar,
+  IonGrid,
+  IonRow,
+  IonCol,
+  IonCard,
+  IonCardHeader,
+  IonCardTitle,
+  IonCardContent,
+   } from '@ionic/angular/standalone';
 
 @Component({
-    selector: 'app-products',
-    templateUrl: './products.page.html',
-    styleUrls: ['./products.page.scss'],
-    standalone: true,
-    imports: [IonButton, IonCardContent, IonCardSubtitle, IonCardTitle, IonCardHeader, IonCard, IonCol, IonRow, IonGrid, IonContent,
-        FooterComponent,
-        IonHeader,
-        IonTitle,
-        IonToolbar,
-        CommonModule,
-        FormsModule, FondoComponent]
+  selector: 'app-products',
+  templateUrl: './products.page.html',
+  styleUrls: ['./products.page.scss'],
+  standalone: true,
+  imports: [IonContent,
+    IonHeader,
+    IonTitle,
+    IonToolbar,
+    CommonModule,
+    FormsModule,
+    IonGrid,
+    IonRow,
+    IonCol,
+    IonCard,
+    IonCardHeader,
+    IonCardTitle,
+    IonCardContent]
 })
 export class ProductsPage implements OnInit {
 
   products = [
     {
-      id: 1,
-      name: 'Gaming Keyboard',
-      price: 99.99,
-      image: 'assets/images/keyboard.jpg',
-      description: 'A high-quality mechanical keyboard with RGB lighting.'
+      name: 'Laptop Gamer',
+      description: 'Laptop HP 15.6" con 16GB de RAM y 256GB SSD.',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnBjCFAcg2aJsDj2qYkovl82huTackdsiEUA&s'
     },
     {
-      id: 2,
-      name: 'Gaming Mouse',
-      price: 49.99,
-      image: 'assets/images/mouse.jpg',
-      description: 'Ergonomic gaming mouse with customizable buttons.'
+      name: 'Celular Gaming',
+      description: 'Teléfono gaming con 16GB de RAM.',
+      image: 'https://www.powerplanetonline.com/cdnassets/blog/mejores-moviles-gaming.webp'
     },
-    // Agrega más productos según sea necesario
+    {
+      name: 'PC Gaming',
+      description: 'PC Gaming con 32GB de RAM y 2TB SSD.',
+      image: 'https://www.pcspecialist.es/images/landing/pcs/gaming-pc/bundle.jpg'
+    },
+    {
+      name: 'AMD Ryzen 7 7800X',
+      description: 'Procesador AMD Ryzen 7 7800X.',
+      image: 'https://www.amd.com/content/dam/amd/en/images/products/processors/ryzen/2505503-ryzen-7-7800x3d.jpg'
+    },
+    // Añade más productos según sea necesario
   ];
 
   constructor() { }
