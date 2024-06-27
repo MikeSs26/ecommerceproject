@@ -1,4 +1,3 @@
-import { HttpClientModule } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { IonButton, IonButtons } from '@ionic/angular/standalone'; // Asegúrate de importar correctamente desde '@ionic/angular'

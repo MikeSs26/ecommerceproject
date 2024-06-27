@@ -1,4 +1,3 @@
-import { HttpClientModule } from '@angular/common/http';
 import { Component, ViewChild, OnInit, } from '@angular/core';
 import {
   IonSelect,
