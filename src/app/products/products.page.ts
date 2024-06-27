@@ -56,17 +56,12 @@ export class ProductsPage implements OnInit {
       description: 'Procesador AMD Ryzen 7 7800X.',
       image: 'https://www.amd.com/content/dam/amd/en/images/products/processors/ryzen/2505503-ryzen-7-7800x3d.jpg'
     },
-    // Añade más productos según sea necesario
+    // productos provisionales, deben ser agregados desde la base de datos
   ];
 
   constructor() { }
 
   ngOnInit() {
     console.log(this.products);
-  }
-
-  addToCart(product: any) {
-    console.log('Add to cart', product);
-    // Aquí podrías agregar la lógica para manejar la adición de productos al carrito
   }
 }

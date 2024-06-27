@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {
-  IonContent} from '@ionic/angular/standalone';
+import { Component } from '@angular/core';
+import { IonContent} from '@ionic/angular/standalone';
 @Component({
   selector: 'app-fondo',
   templateUrl: './fondo.component.html',
@@ -9,10 +8,6 @@ import {
   imports: [IonContent
     ]
 })
-export class FondoComponent  implements OnInit {
-
+export class FondoComponent {
   constructor() { }
-
-  ngOnInit() {}
-
 }

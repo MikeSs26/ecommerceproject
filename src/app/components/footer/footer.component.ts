@@ -1,5 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { IonFooter, IonToolbar, IonTitle, IonSegmentButton , IonSegment} from '@ionic/angular/standalone';
+import { Component } from '@angular/core';
+import { IonFooter,
+  IonToolbar,
+  IonTitle,
+  IonSegmentButton ,
+  IonSegment} from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-footer',
@@ -14,11 +18,6 @@ import { IonFooter, IonToolbar, IonTitle, IonSegmentButton , IonSegment} from '@
     IonSegment
   ]
 })
-export class FooterComponent implements OnInit {
- 
-
+export class FooterComponent {
   constructor() { }
-
-  ngOnInit() {}
-
 }
