@@ -1,8 +1,8 @@
 import { Component   } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonBreadcrumb, IonLabel, IonItem,IonButton, IonInput } from '@ionic/angular/standalone';
-import {CarritoService} from '../services/carrito.services';
+import { IonContent, IonBreadcrumbs, IonBreadcrumb, IonLabel, IonItem,IonButton, IonInput } from '@ionic/angular/standalone';
+import {CarritoService} from '../service/carrito.services';
 
 @Component({
   selector: 'app-pago',
@@ -17,7 +17,8 @@ import {CarritoService} from '../services/carrito.services';
     IonItem, 
     IonLabel, 
     IonButton,
-    IonInput
+    IonInput, 
+    IonBreadcrumbs
   ]
 })
 export class PagoPage {

@@ -39,13 +39,16 @@ export class SelectComponent  implements OnInit {
   redireccionar(opcionSeleccionada: string) {
     switch (opcionSeleccionada) {
       case 'opcion1':
-        window.location.href = "https://ionicframework.com/docs/api/content";
+        window.location.href = "products";
         break;
       case 'opcion2':
-        window.location.href = "https://ionicframework.com/docs/api/datetime";
+        window.location.href = "products";
         break;
       case 'opcion3':
-        window.location.href = "https://ionicframework.com/docs/api/picker";
+        window.location.href = "products";
+        break;
+        case 'opcion4':
+        window.location.href = "products";
         break;
       default:
         break;

@@ -1,7 +1,17 @@
 <ion-content>
     <h4>Carrito de Compras</h4>
+    <!-- Breadcrumbs -->
+     <div class="breadcrumb">
+      <ion-breadcrumbs>
+        <ion-breadcrumb href="#home">Home</ion-breadcrumb>
+        <ion-breadcrumb href="#products">Products</ion-breadcrumb>
+        <ion-breadcrumb href="#pago">¡A Pagar!</ion-breadcrumb>
+      </ion-breadcrumbs>
+    </div>
     <!-- Metodos de Pago -->
     <div class="contenedor">
+      
+
         <div class="metodos">
             <form (ngSubmit)="submitPaymentForm()" #paymentForm="ngForm">
                 <ion-item>

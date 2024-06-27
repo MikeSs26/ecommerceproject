@@ -11,11 +11,7 @@ import { CarritoComponent } from './carrito/carrito.component';
 import { LoginComponent } from './login/login.component';
 import { MenuComponent } from './menu/menu.component'; 
 import { BarraBusquedaComponent } from './barra-busqueda/barra-busqueda.component';
-<<<<<<< HEAD
 import { LoginuserPage } from './loginuser/loginuser.page';
-=======
-import { HttpClientModule } from '@angular/common/http';
->>>>>>> fdb171bf751f4d63c765971231a34f79d52046aa
 
 @Component({
   selector: 'app-root',
