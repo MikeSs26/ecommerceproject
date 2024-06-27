@@ -6,16 +6,20 @@ import { FooterComponent } from './footer/footer.component';
 import { HomePage } from './home/home.page';
 import { FondoComponent } from './fondo/fondo.component';
 import { ProductsPage } from './products/products.page';
+import { PagoPage } from './pago/pago.page';
 import { CarritoComponent } from './carrito/carrito.component';
 import { LoginComponent } from './login/login.component';
 import { MenuComponent } from './menu/menu.component'; 
 import { BarraBusquedaComponent } from './barra-busqueda/barra-busqueda.component';
+import { LoginuserPage } from './loginuser/loginuser.page';
 
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
   standalone: true,
-  imports: [IonApp, IonRouterOutlet,
+  imports: [
+    IonApp, 
+    IonRouterOutlet,
     SelectComponent,
     HeaderComponent,
     FooterComponent,
@@ -23,6 +27,7 @@ import { BarraBusquedaComponent } from './barra-busqueda/barra-busqueda.componen
     HomePage,
     FondoComponent, 
     ProductsPage, 
+    PagoPage,
     CarritoComponent,
     LoginComponent,
     MenuComponent,
