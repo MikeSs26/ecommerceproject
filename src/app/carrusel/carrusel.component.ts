@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
-import { IonicModule } from '@ionic/angular';
-import { SwiperStandaloneModule } from '../Modules/swiper-standalone/swiper-standalone.module';
+import { IonContent,
+  IonGrid, IonRow, IonCol, IonCard, IonCardTitle, IonCardHeader, IonCardContent } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-carrusel',
   templateUrl: './carrusel.component.html',
   styleUrls: ['./carrusel.component.scss'],
   standalone: true,
-  imports: [IonicModule, SwiperStandaloneModule],
+  imports: [IonCardContent, IonCardHeader, IonCardTitle, IonCard, IonCol, IonRow, IonContent,
+    IonGrid],
 })
 export class CarruselComponent {
 

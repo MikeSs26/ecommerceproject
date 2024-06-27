@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonContent} from '@ionic/angular/standalone';
 import { FondoComponent } from '../fondo/fondo.component';
-import { MainCardsComponent } from '../main-cards/main-cards.component';
+import { MainCardsComponent } from '../components/main-cards/main-cards.component';
 import { CarruselComponent } from '../carrusel/carrusel.component';
 import { FooterComponent } from '../components/footer/footer.component';
 
@@ -10,7 +10,7 @@ import { FooterComponent } from '../components/footer/footer.component';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
   standalone: true,
-  imports: [ IonContent, 
+  imports: [ IonContent,
     FondoComponent,
     IonContent,
     MainCardsComponent,

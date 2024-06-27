@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { ProductsPage } from './products/products.page';
 
 export const routes: Routes = [
   {
@@ -14,5 +15,10 @@ export const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full',
   },
- 
+  {
+    path: 'products',
+    loadComponent: () => import('./products/products.page').then( m => m.ProductsPage)
+  },
+
+
 ];
