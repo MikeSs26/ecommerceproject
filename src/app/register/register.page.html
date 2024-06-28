@@ -1,0 +1,43 @@
+<app-header></app-header>
+<ion-content class="ion-padding">
+  <div class="register-container">
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">Nombre</ion-label>
+        <ion-input [(ngModel)]="name" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Apellido</ion-label>
+        <ion-input [(ngModel)]="lastName" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Nombre de Usuario</ion-label>
+        <ion-input [(ngModel)]="username" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Correo Electrónico</ion-label>
+        <ion-input [(ngModel)]="email" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input [(ngModel)]="password" type="password" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Número de Teléfono</ion-label>
+        <ion-input [(ngModel)]="phoneNumber" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Provincia</ion-label>
+        <ion-select [(ngModel)]="province" required>
+          <ion-select-option *ngFor="let province of provinces" [value]="province.id_province">
+            {{ province.name }}
+          </ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <ion-button expand="full" (click)="register()">Registrar</ion-button>
+    <ion-text color="danger" *ngIf="errorMessage">{{ errorMessage }}</ion-text>
+    <ion-text color="success" *ngIf="successMessage">{{ successMessage }}</ion-text>
+  </div>
+</ion-content>
+<app-footer></app-footer>

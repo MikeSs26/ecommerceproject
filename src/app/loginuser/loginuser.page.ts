@@ -3,20 +3,23 @@ import { AuthService } from '../service/auth.service';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
+import { FooterComponent } from '../footer/footer.component';
+import { HeaderComponent } from '../header/header.component';
 
 @Component({
   selector: 'app-loginuser',
   templateUrl: './loginuser.page.html',
   styleUrls: ['./loginuser.page.scss'],
   standalone: true,
-  imports: [CommonModule, IonicModule, FormsModule]
+  imports: [CommonModule, IonicModule, FormsModule, FooterComponent, HeaderComponent]
 })
 export class LoginuserPage implements OnInit {
   username: string = '';
   password: string = '';
   errorMessage: string = '';
 
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService, private router: Router) {}
 
   ngOnInit(): void {}
 
@@ -35,5 +38,9 @@ export class LoginuserPage implements OnInit {
       console.error('Error logging in:', error);
       this.errorMessage = 'Error al iniciar sesión';
     }
+  }
+
+  goToRegister() {
+    this.router.navigate(['/register']);
   }
 }

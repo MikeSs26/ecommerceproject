@@ -11,7 +11,6 @@ import { CarritoComponent } from './carrito/carrito.component';
 import { LoginComponent } from './login/login.component';
 import { MenuComponent } from './menu/menu.component'; 
 import { BarraBusquedaComponent } from './barra-busqueda/barra-busqueda.component';
-import { LoginuserPage } from './loginuser/loginuser.page';
 
 @Component({
   selector: 'app-root',

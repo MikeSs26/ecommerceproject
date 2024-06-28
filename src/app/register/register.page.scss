@@ -1,0 +1,32 @@
+ion-content {
+  --background: #f4f5f8; /* Cambiar color de fondo si es necesario */
+  --ion-background-color: #f4f5f8;
+
+  .register-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+
+    ion-list {
+      width: 100%;
+      max-width: 400px; /* Ancho máximo del formulario */
+    }
+
+    ion-item {
+      --padding-start: 0;
+      --padding-end: 0;
+      margin-bottom: 12px;
+    }
+
+    ion-button {
+      margin-top: 20px;
+    }
+
+    ion-text {
+      margin-top: 10px;
+    }
+  }
+}
