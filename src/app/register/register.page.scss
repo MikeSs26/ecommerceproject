@@ -29,15 +29,6 @@
   position: relative; /* Añadido para posicionar los mensajes de forma relativa */
 }
 
-.success-message,
-.error-message {
-  position: absolute;
- 
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  text-align: center;
-}
 
 .form-icon-container {
   text-align: center;
@@ -65,20 +56,17 @@
 }
 
 ion-item {
-  --padding-start: 0;
   --padding-end: 0;
   margin-bottom: 12px;
+  
 }
 
-/* Estilos para centrar el placeholder del ion-select */
-ion-select {
-  width: 100%; /* Ajusta el ancho del ion-select */
-  max-width: 400px; /* Ancho máximo del ion-select */
+.ion-item2 {
+  --padding-start: 39%;
+  --padding-end: 0px;
+  
 }
 
-ion-select::part(text) {
-  text-align: center; /* Centra el texto del placeholder */
-}
 
 ion-button.register-button {
   margin-top: 20px;

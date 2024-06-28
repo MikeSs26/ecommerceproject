@@ -29,12 +29,12 @@
             <ion-input placeholder="Número de Teléfono" [(ngModel)]="phoneNumber" name="phoneNumber" class="form-input" required></ion-input>
           </ion-item>
           <ion-item>
-            <ion-select placeholder="Provincia" [(ngModel)]="province" name="province" class="form-input" required>
+            <ion-select placeholder="Provincia" [(ngModel)]="province" name="province" class="ion-item2" required>
               <ion-select-option *ngFor="let province of provinces" [value]="province.id_province">
                 {{ province.name }}
               </ion-select-option>
             </ion-select>
-          </ion-item>
+          </ion-item>          
         </div>
       </div>
       <ion-button expand="full" type="submit" class="register-button">Registrar</ion-button>
