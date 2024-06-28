@@ -5,6 +5,7 @@ import { SelectComponent } from '../select/select.component';
 import { FondoComponent } from '../fondo/fondo.component';
 import { MenuComponent } from '../menu/menu.component';
 import { FooterComponent } from '../footer/footer.component';
+import { CarouselComponent } from '../carousel/carousel.component';
 
 @Component({
   selector: 'app-home',
@@ -17,7 +18,7 @@ import { FooterComponent } from '../footer/footer.component';
     FondoComponent,
    IonContent, 
    MenuComponent,
-   FooterComponent],
+   FooterComponent, CarouselComponent],
 })
 export class HomePage {
 

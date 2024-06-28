@@ -21,3 +21,6 @@ ion-content {
     background: transparent;
   }
   
+  ion-content {
+    --padding-top: 56px; /* Debe coincidir con la altura de tu encabezado */
+  }
