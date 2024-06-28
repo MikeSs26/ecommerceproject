@@ -70,4 +70,8 @@ export class RegisterPage implements OnInit {
       this.errorMessage = 'Error al registrar el usuario';
     }
   }
+
+  redirectToHome() {
+    this.router.navigate(['/home']); // Reemplaza '/home' con la ruta real de tu home
+  }
 }

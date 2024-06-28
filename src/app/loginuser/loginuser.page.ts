@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../service/auth.service';
 import { CommonModule } from '@angular/common';
-import { IonicModule } from '@ionic/angular';
+import { IonicModule, AlertController } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { FooterComponent } from '../footer/footer.component';
@@ -19,7 +19,7 @@ export class LoginuserPage implements OnInit {
   password: string = '';
   errorMessage: string = '';
 
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(private authService: AuthService, private router: Router, private alertController: AlertController) {}
 
   ngOnInit(): void {}
 
@@ -27,17 +27,32 @@ export class LoginuserPage implements OnInit {
     try {
       const isValid = await this.authService.login(this.username, this.password);
       if (isValid) {
-        // Login exitoso, redirigir a la página principal o realizar acciones necesarias
-        console.log('Login successful');
         this.errorMessage = '';
+        this.showSuccessAlert();
       } else {
-        // Contraseña incorrecta o usuario no encontrado
         this.errorMessage = 'Credenciales incorrectas';
       }
     } catch (error) {
       console.error('Error logging in:', error);
       this.errorMessage = 'Error al iniciar sesión';
     }
+  }
+
+  async showSuccessAlert() {
+    const alert = await this.alertController.create({
+      header: 'Login exitoso',
+      message: 'Iniciada sesión correctamente',
+      buttons: [
+        {
+          text: 'Listo',
+          handler: () => {
+            this.router.navigate(['/home']);
+          }
+        }
+      ]
+    });
+
+    await alert.present();
   }
 
   goToRegister() {

@@ -1,18 +1,23 @@
-<ion-content>
+<ion-content fullscreen>
+  <img src="../../assets/images/purple.jpg" alt="fondo2" class="background">
+  
   <div class="login-container">
     <form (ngSubmit)="onLogin()">
-      <ion-item>
-        <ion-label position="floating">Username</ion-label>
-        <ion-input [(ngModel)]="username" name="username" required></ion-input>
+      <div class="form-icon-container">
+        <img src="../../assets/images/loginuser.png" alt="Icono" class="form-icon">
+      </div>
+      <ion-item class="form-item">
+        <ion-input placeholder="Username" [(ngModel)]="username" name="username" class="form-input" required></ion-input>
       </ion-item>
-      <ion-item>
-        <ion-label position="floating">Password</ion-label>
-        <ion-input [(ngModel)]="password" name="password" type="password" required></ion-input>
+      
+      <ion-item class="form-item with-margin">
+        <ion-input placeholder="Password" [(ngModel)]="password" name="password" type="password" class="form-input" required></ion-input>
       </ion-item>
-      <ion-button expand="full" type="submit">Login</ion-button>
-      <ion-button expand="full" (click)="goToRegister()">Register</ion-button>
+      <ion-button expand="full" type="submit" class="login-button">Login</ion-button>
+      <ion-button expand="full" (click)="goToRegister()" class="register-button">Register</ion-button>
+      <div style="text-align: center;"> * Crear nuevo Usuario</div>
+      <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
     </form>
-    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
   </div>
 </ion-content>
 <app-footer></app-footer>

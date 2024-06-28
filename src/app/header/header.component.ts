@@ -29,12 +29,12 @@ import { CommonModule } from '@angular/common';
     CommonModule, 
     RouterModule
     ]
-})
-export class HeaderComponent  {
+}) export class HeaderComponent {
 
   constructor(private router: Router) {}
 
-  navigateToLogin() {
-    this.router.navigateByUrl('/loginuser');
+  navigateToHome() {
+    this.router.navigateByUrl('/home'); // Reemplaza '/home' con la ruta real de tu home
   }
+
 }

@@ -1,29 +1,69 @@
 .login-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    padding: 20px;
-    box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Usamos 100vh para que el contenedor ocupe toda la altura de la pantalla */
+  padding: 20px;
+  box-sizing: border-box;
+  background-size: cover; /* Ajusta la imagen para cubrir toda el área del contenedor */
+
+  .form-icon-container {
+    text-align: center;
+    margin-bottom: 20px; /* Espacio bajo el icono */
+    
   }
-  
+
+  .form-item {
+    margin-bottom: 15px; /* Espacio entre los items */
+  }
+  .form-icon {
+    width: 70px; /* Tamaño de la imagen */
+    height: 70px; /* Tamaño de la imagen */
+    /* Ajusta otros estilos según sea necesario */
+    border-radius: 30px;
+
+  }
   form {
     width: 100%;
     max-width: 400px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente para el formulario */
+    padding: 20px;
+    border-radius: 20px; /* Redondea las esquinas del formulario */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera para el efecto de elevación */
   }
-  
-  ion-item {
-    margin-bottom: 15px;
-  }
-  
+
   ion-button {
     margin-top: 20px;
+    --border-radius: 10px; /* Ajusta el redondeo de las esquinas */
+
+    &.login-button {
+      --background: #363638; /* Cambia este color al que desees para el botón de login */
+      --color: #fff; /* Color del texto del botón de login */
+    }
+    &.register-button {
+      --background: #363638; /* Cambia este color al que desees para el botón de register */
+      --color: #fff; /* Color del texto del botón de register */
+    }
   }
-  
-  .error-message {
-    color: red;
-    margin-top: 15px;
-    text-align: center;
-  }
-  
+}
+
+.error-message {
+  color: red;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Asegura que esté detrás de todos los demás elementos */
+  object-fit: cover; /* Ajusta la imagen para cubrir todo el área */
+  opacity: 0.8; /* Ajusta la opacidad según sea necesario */
+}
+.form-input {
+  text-align: center; /* Centra el texto del placeholder */
+}

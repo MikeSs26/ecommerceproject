@@ -1,32 +1,93 @@
-ion-content {
-  --background: #f4f5f8; /* Cambiar color de fondo si es necesario */
-  --ion-background-color: #f4f5f8;
+.background {
+  position: fixed; /* Cambiado a fixed para mantener el fondo detrás del contenido */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  opacity: 0.8;
+}
 
-  .register-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    padding: 0 20px;
+.register-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ajustado para ocupar toda la altura de la pantalla */
+  padding: 20px;
+  box-sizing: border-box;
+}
 
-    ion-list {
-      width: 100%;
-      max-width: 400px; /* Ancho máximo del formulario */
-    }
+.form-box {
+  width: 100%;
+  max-width: 800px; /* Ancho máximo del formulario según sea necesario */
+  background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
+  padding: 20px;
+  border-radius: 20px; /* Redondea las esquinas del formulario */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera para el efecto de elevación */
+  position: relative; /* Añadido para posicionar los mensajes de forma relativa */
+}
 
-    ion-item {
-      --padding-start: 0;
-      --padding-end: 0;
-      margin-bottom: 12px;
-    }
+.success-message,
+.error-message {
+  position: absolute;
+ 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+}
 
-    ion-button {
-      margin-top: 20px;
-    }
+.form-icon-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
 
-    ion-text {
-      margin-top: 10px;
-    }
-  }
+.form-icon {
+  width: 50px; /* Ajusta el tamaño del ícono según sea necesario */
+  height: 50px;
+  object-fit: cover; /* Ajusta el tamaño del ícono sin deformar */
+  border-radius: 50%; /* Redondea el ícono */
+}
+
+.form-columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-column {
+  width: 45%; /* Ancho de cada columna ajustado */
+}
+
+.form-input {
+  text-align: center; /* Centra el texto del placeholder */
+}
+
+ion-item {
+  --padding-start: 0;
+  --padding-end: 0;
+  margin-bottom: 12px;
+}
+
+/* Estilos para centrar el placeholder del ion-select */
+ion-select {
+  width: 100%; /* Ajusta el ancho del ion-select */
+  max-width: 400px; /* Ancho máximo del ion-select */
+}
+
+ion-select::part(text) {
+  text-align: center; /* Centra el texto del placeholder */
+}
+
+ion-button.register-button {
+  margin-top: 20px;
+  width: 100%; /* Ajusta el ancho del botón para ocupar todo el espacio */
+  text-align: center; /* Centra el texto del botón */
+  --background: #363638; /* Cambia este color al que desees para el botón de register */
+  --color: #fff; /* Color del texto del botón de register */
+}
+
+ion-text {
+  margin-top: 10px;
 }
