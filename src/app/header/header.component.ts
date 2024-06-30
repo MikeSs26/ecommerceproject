@@ -6,6 +6,8 @@ import { Router, RouterLink, RouterLinkActive, RouterModule } from '@angular/rou
 import { SelectComponent } from '../select/select.component';
 import { MenuComponent } from '../menu/menu.component';
 import { AuthService } from '../service/auth.service';
+import { BarraBusquedaComponent } from '../barra-busqueda/barra-busqueda.component';
+import { SearchResultsComponent } from '../search-results/search-results.component';
 
 
 @Component({
@@ -17,11 +19,14 @@ import { AuthService } from '../service/auth.service';
     RouterLink, 
     RouterLinkActive, 
     CommonModule, 
-    RouterModule, IonicModule, FormsModule, MenuComponent, SelectComponent
+    RouterModule, IonicModule, FormsModule, MenuComponent, SelectComponent,
+    BarraBusquedaComponent, SearchResultsComponent
     ]
 })
 export class HeaderComponent {
   showSubMenu: string | null = null;
+  
+  
 
   constructor(private router: Router, private authService: AuthService) {}
 
@@ -52,4 +57,5 @@ export class HeaderComponent {
     Inicio() {
       console.log('Open cart');
       this.router.navigateByUrl('/home');  }
+      
 }

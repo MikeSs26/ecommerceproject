@@ -18,4 +18,21 @@ export class ProductService {
       throw error;
     }
   }
+
+  async searchProductsByName(query: string): Promise<any[]> {
+    try {
+      const response = await axios.get(this.apiUrl, {
+        params: {
+          name: query
+        }
+      });
+      return response.data;
+    } catch (error) {
+      console.error('Error searching products by name:', error);
+      throw error;
+    }
+  }
 }
+
+
+

@@ -5,8 +5,8 @@
         <img src="assets/images/etech-negro.png" alt="Logo" class="logo">
       </ion-button>
     </ion-buttons>
-
     <ion-buttons slot="end">
+      <app-barra-busqueda class="busqueda"></app-barra-busqueda>
       <ion-button (click)="openCart()">
         <img src="assets/images/carrito.png" alt="Icono de carrito" class="carrito">
       </ion-button>
@@ -14,7 +14,10 @@
         <img src="assets/images/login.png" alt="Icono de login" class="login-icon">
       </ion-button>
     </ion-buttons>
-  <app-select></app-select>
+  <app-select class="menu"></app-select>
   </ion-toolbar>
+ 
 </ion-header>
-
+<div class="results-wrapper">
+  <app-search-results></app-search-results>
+</div>

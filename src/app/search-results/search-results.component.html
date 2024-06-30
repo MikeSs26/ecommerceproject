@@ -1,0 +1,7 @@
+<div *ngIf="showResults" class="search-results-container">
+  <ion-list>
+    <ion-item button *ngFor="let product of searchResults" (click)="navigateToProduct(product); closeResultsContainer()">
+      {{ product.name }}
+    </ion-item>
+  </ion-list>
+</div>

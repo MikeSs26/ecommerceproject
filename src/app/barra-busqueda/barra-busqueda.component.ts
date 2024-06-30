@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { SearchService } from '../service/search.service';
 
 @Component({
   selector: 'app-barra-busqueda',
@@ -11,22 +11,13 @@ import { HttpClientModule } from '@angular/common/http';
   templateUrl: './barra-busqueda.component.html',
   styleUrls: ['./barra-busqueda.component.scss'],
 })
-export class BarraBusquedaComponent {
-  QueryBusqueda: string = '';
-  items: string[] = ['Item 1', 'Item 2', 'Item 3', 'Item 4'];
-  ProductosFiltrados: string[] = [];
+export class BarraBusquedaComponent { searchQuery: string = '';
 
-  constructor() {
-    this.ProductosFiltrados = [];
-  }
+  constructor(private searchService: SearchService) {}
+
+  ngOnInit() {}
 
   onSearch() {
-    const query = this.QueryBusqueda.toLowerCase();
-    if (query.trim() !== '') {
-      this.ProductosFiltrados = this.items.filter(item => item.toLowerCase().includes(query));
-    } else {
-      this.ProductosFiltrados = [];
-    }
-    console.log('Filtered Items:', this.ProductosFiltrados);
+    this.searchService.setSearchQuery(this.searchQuery);
   }
 }

@@ -2,6 +2,32 @@
 ion-searchbar {
     margin: 0;
     padding: 0;
-    color: aliceblue;
+    text-align: center;
+    --background: #020202; /* Cambia el fondo del searchbar */
+    --color: #ffffff; /* Cambia el color del texto del searchbar */
+    
   }
   
+.product-item {
+  --background: #000000; /* Cambia el fondo de los elementos de la lista */
+  --color: #fefefe; /* Cambia el color del texto de los elementos de la lista */
+  padding: 10px;
+  border-bottom: 1px solid #eee; /* Separación entre elementos de la lista */
+}
+
+.custom-searchbar {
+  width: 100%;
+}
+.search-results-container {
+  position: absolute;
+  top: 100%; /* Ajusta esto según la altura del header */
+  left: 0;
+  right: 0;
+  background-color: white;
+  z-index: 1000;
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 0 10px; /* Para que no se vea pegado al borde */
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para visibilidad */
+}
