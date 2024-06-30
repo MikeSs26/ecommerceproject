@@ -1,11 +1,27 @@
-<div class="menu">
-  <button ion-button (click)="toggleMenu()">Toggle Menu</button>
-  <div class="menu-content" *ngIf="isOpen">
-      <app-menu>
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
-      </app-menu>
-      <button ion-button (click)="toggleMenu()">Toggle Menu</button>
-  </div>
-</div>
+
+    <!-- Main navigation menu -->
+    <ion-buttons slot="primary" class="menu-buttons">
+      <div class="menu-item">
+        <ion-button expand="block">DESKTOPS</ion-button>
+       
+        <ion-list>
+          <ion-item (click)="navigateTo('gaming')">Gaming</ion-item>
+          <ion-item (click)="navigateTo('working')">Working</ion-item>
+          <ion-item (click)="navigateTo('parts')">Parts</ion-item>
+        </ion-list>
+        
+      </div>
+      <div class="menu-item">
+        <ion-button expand="block">LAPTOPS</ion-button>
+      </div>
+      <div class="menu-item">
+        <ion-button expand="block">MOBILES</ion-button>
+      </div>
+      <div class="menu-item">
+        <ion-button expand="block">COMPONENTS</ion-button>
+      </div>
+      <div class="menu-item">
+        <ion-button expand="block">ACCESSORIES</ion-button>
+      </div>
+      <ion-button expand="block">MORE</ion-button>
+    </ion-buttons>

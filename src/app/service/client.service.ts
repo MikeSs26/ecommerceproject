@@ -7,6 +7,8 @@ import axios from 'axios';
 export class ClientService {
   private apiUrl = 'http://localhost:8080/api/clients';
   private provincesUrl = 'http://localhost:8080/api/provinces'; // Ajusta la URL si es necesario
+  private userDataKey = 'userData';
+
 
   constructor() {}
 
@@ -28,4 +30,5 @@ export class ClientService {
     const response = await axios.get(this.provincesUrl);
     return response.data;
   }
+
 }

@@ -1,25 +1,19 @@
-<ion-header translucent style="width: 100%;">
-  <ion-toolbar>
-    <table style="width: 100%; border-collapse: collapse;">
-      <tr>
-        <th style="width: 10%; text-align: center;">
-          <ion-title (click)="navigateToHome()" class="pointer-cursor">
-            <img src='assets/images/etech-negro.png' alt="logo" style="max-width: 50%; max-height: 50%;"> 
-          </ion-title>
-        </th>
-        <td style="width: 30%; text-align: center;">
-          <app-select class="pointer-cursor"></app-select>
-        </td>
-        <td style="width: 15%; text-align: center; vertical-align: center;">
-          <app-barra-busqueda class="pointer-cursor"></app-barra-busqueda>
-        </td>
-        <td style="width: 5%; text-align: left;">
-          <app-carrito class="pointer-cursor"></app-carrito>
-        </td>
-        <td style="width: 8%; text-align: right;">
-          <app-login class="pointer-cursor"></app-login>
-        </td>
-      </tr>
-    </table>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-icon name="logo"></ion-icon>
+      <ion-title class="header-title">My App</ion-title>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="openCart()">
+        <ion-icon name="cart"></ion-icon>
+      </ion-button>
+      <ion-button (click)="openProfile()">
+        <ion-icon name="person"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+   <app-menu class="menu-buttons"></app-menu>
   </ion-toolbar>
 </ion-header>
+

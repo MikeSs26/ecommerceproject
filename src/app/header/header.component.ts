@@ -1,12 +1,11 @@
-import { Component } from '@angular/core';
-import { IonHeader, IonToolbar, IonTitle, IonContent, IonButtons} from '@ionic/angular/standalone';
-import { SelectComponent } from '../select/select.component';
-import { CarritoComponent } from '../carrito/carrito.component';
-import { MenuComponent } from '../menu/menu.component';
-import { LoginComponent } from '../login/login.component';
-import { BarraBusquedaComponent } from '../barra-busqueda/barra-busqueda.component';
-import { Router, RouterLink, RouterLinkActive, RouterModule } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { IonicModule,  } from '@ionic/angular';
+import { FormsModule } from '@angular/forms';
+import { RouterLink, RouterLinkActive, RouterModule } from '@angular/router';
+import { MenuController } from '@ionic/angular';
+import { MenuComponent } from '../menu/menu.component';
+
 
 @Component({
   selector: 'app-header',
@@ -14,27 +13,32 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./header.component.scss'],
   standalone: true,
   imports: [
-    IonHeader ,
-    IonToolbar,
-    IonTitle, 
-    IonContent,
-    IonButtons,
-    SelectComponent,
-    CarritoComponent,
-    MenuComponent,
-    LoginComponent,
-    BarraBusquedaComponent, 
     RouterLink, 
     RouterLinkActive, 
     CommonModule, 
-    RouterModule
+    RouterModule, IonicModule, FormsModule, MenuComponent
     ]
-}) export class HeaderComponent {
+})
+export class HeaderComponent {
+  showSubMenu: string | null = null;
 
-  constructor(private router: Router) {}
+  constructor() {}
 
-  navigateToHome() {
-    this.router.navigateByUrl('/home'); // Reemplaza '/home' con la ruta real de tu home
+  toggleSubMenu(menuItem: string) {
+    if (this.showSubMenu === menuItem) {
+      this.showSubMenu = null;
+    } else {
+      this.showSubMenu = menuItem;
+    }
   }
 
+  openCart() {
+    console.log('Open cart');
+    // Implementa la lógica para abrir el carrito
+  }
+
+  openProfile() {
+    console.log('Open profile');
+    // Implementa la lógica para abrir el perfil
+  }
 }

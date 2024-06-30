@@ -1,0 +1,46 @@
+<ion-content fullscreen>
+  <div class="background">
+    <img src="../../assets/images/purple.jpg" alt="fondo2" class="background-img">
+  </div>
+  <div class="form-container">
+    <div class="form-columns">
+      <div class="form-column">
+        <div class="profile-container">
+          <form class="form-box">
+            <ion-item>
+              <ion-label>Nombre</ion-label>
+              <ion-input [(ngModel)]="client.name" name="name" readonly class="form-input"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label>Apellido</ion-label>
+              <ion-input [(ngModel)]="client.last_name" name="last_name" readonly class="form-input"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label>Nombre de Usuario</ion-label>
+              <ion-input [(ngModel)]="client.username" name="username" readonly class="form-input"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label>Correo Electrónico</ion-label>
+              <ion-input [(ngModel)]="client.email" name="email" readonly class="form-input"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label>Número de Teléfono</ion-label>
+              <ion-input [(ngModel)]="client.phone_number" name="phone_number" readonly class="form-input"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label>Provincia</ion-label>
+              <ion-input [(ngModel)]="client.province.name" name="province" readonly class="form-input"></ion-input>
+            </ion-item>
+          </form>
+        </div>
+      </div>
+      <div class="form-column">
+        <div class="form-icon-container">
+          <img src="../../assets/images/loginuser.png" alt="Icono" class="form-icon">
+        </div>
+        <ion-button expand="full" class="register-button" (click)="logout()">Cerrar Sesión</ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>
+<app-footer></app-footer>

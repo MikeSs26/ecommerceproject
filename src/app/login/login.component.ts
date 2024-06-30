@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { IonButton, IonButtons } from '@ionic/angular/standalone'; // Asegúrate de importar correctamente desde '@ionic/angular'
+import { IonButton, IonButtons } from '@ionic/angular/standalone';
+import { AuthService } from '../service/auth.service'; // Importar AuthService
 
 @Component({
   selector: 'app-login',
@@ -10,10 +11,9 @@ import { IonButton, IonButtons } from '@ionic/angular/standalone'; // Asegúrate
   imports: [IonButton, IonButtons]
 })
 export class LoginComponent implements OnInit {
-
   imageUrl: string = 'https://drive.google.com/uc?export=view&id=10PeUuNFTrWBpkB3RHWAKO9huLQZPLq2b';
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private authService: AuthService) {}
 
   ngOnInit(): void {
     // Implementa aquí la lógica de inicialización necesaria
@@ -24,7 +24,10 @@ export class LoginComponent implements OnInit {
   }
 
   navigateToLogin() {
-    this.router.navigateByUrl('/loginuser');
+    if (this.authService.isAuthenticated()) {
+      this.router.navigateByUrl('/perfil');
+    } else {
+      this.router.navigateByUrl('/loginuser');
+    }
   }
-
 }

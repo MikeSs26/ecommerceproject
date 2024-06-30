@@ -1,6 +1,15 @@
-.menu {
-  
+.menu-buttons {
   display: flex;
   justify-content: center;
-  align-items: center;    
+  align-items: center;
+  width: 100%;
+}
+
+.menu-buttons ion-button {
+  font-size: 14px; /* Ajusta el tamaño de fuente según sea necesario */
+  padding: 8px 16px; /* Ajusta el espaciado interno según sea necesario */
+}
+
+.menu-item {
+  position: relative;
 }

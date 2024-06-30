@@ -2,19 +2,13 @@
   display: flex; 
   justify-content: center; 
   align-items: center;
-  margin-bottom: 0px;
+  margin-bottom: 10px; /* Espacio en la parte inferior */
 }
 
-.centrado {
-  margin-right: relative;
-  
-}
 .select-pequeno {
-  font-size: 20px; 
-  
+  font-size: 16px; /* Tamaño de fuente ajustado */
 }
 
 .seleccionable ion-label {
-  --color: white; 
+  --color: white; /* Color del texto */
 }
-

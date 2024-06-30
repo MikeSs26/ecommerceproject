@@ -1,12 +1,23 @@
-.carrito {
-  display: flex;
-  margin-left: 0%;
-}
-.logo {
-  background-image: src("assets/images/etech-negro.png");
- 
+ion-toolbar {
+  --ion-toolbar-height: 50px; /* Ajusta la altura según sea necesario */
 }
 
-ion-toolbar {
-  --ion-background-color: rgb(12, 11, 11);
+.menu-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.menu-buttons ion-button {
+  font-size: 14px; /* Ajusta el tamaño de fuente según sea necesario */
+  padding: 8px 16px; /* Ajusta el espaciado interno según sea necesario */
+}
+
+.menu-item {
+  position: relative;
+}
+
+ion-item {
+  --background: transparent;
 }

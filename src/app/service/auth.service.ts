@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { ToastController } from '@ionic/angular';
-
 import axios from 'axios';
 
 @Injectable({
@@ -26,6 +25,9 @@ export class AuthService {
       const client = clients.find((c: any) => c.username === username && c.password === password);
 
       if (client) {
+        // Guardar datos del usuario en localStorage
+        localStorage.setItem('currentUser', JSON.stringify(client));
+
         // Autenticación exitosa
         await this.presentToast('Inicio de sesión exitoso');
         return true;
@@ -40,6 +42,11 @@ export class AuthService {
     }
   }
 
+  logout() {
+    localStorage.removeItem('currentUser');
+    this.presentToast('Cierre de sesión exitoso');
+  }
+
   async presentToast(message: string) {
     const toast = await this.toastController.create({
       message: message,
@@ -47,5 +54,14 @@ export class AuthService {
       position: 'bottom' // Posición del toast en la pantalla
     });
     toast.present();
+  }
+
+  getCurrentUser() {
+    const user = localStorage.getItem('currentUser');
+    return user ? JSON.parse(user) : null;
+  }
+
+  isAuthenticated(): boolean {
+    return !!this.getCurrentUser();
   }
 }
