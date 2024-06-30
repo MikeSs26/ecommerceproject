@@ -1,19 +1,20 @@
 <ion-header>
-  <ion-toolbar color="primary">
+  <ion-toolbar class="toolbar">
     <ion-buttons slot="start">
-      <ion-icon name="logo"></ion-icon>
-      <ion-title class="header-title">My App</ion-title>
+      <ion-button (click)="Inicio()">
+        <img src="assets/images/etech-negro.png" alt="Logo" class="logo">
+      </ion-button>
     </ion-buttons>
 
     <ion-buttons slot="end">
       <ion-button (click)="openCart()">
-        <ion-icon name="cart"></ion-icon>
+        <img src="assets/images/carrito.png" alt="Icono de carrito" class="carrito">
       </ion-button>
       <ion-button (click)="openProfile()">
-        <ion-icon name="person"></ion-icon>
+        <img src="assets/images/login.png" alt="Icono de login" class="login-icon">
       </ion-button>
     </ion-buttons>
-   <app-menu class="menu-buttons"></app-menu>
+  <app-select></app-select>
   </ion-toolbar>
 </ion-header>
 

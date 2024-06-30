@@ -5,7 +5,10 @@ import {
   IonLabel,
   IonItem,
   IonList,
+  IonButton
   } from '@ionic/angular/standalone';
+import { Router, RouterLink } from '@angular/router';
+
 
 @Component({
   selector: 'app-select',
@@ -16,12 +19,20 @@ import {
     IonItem,
     IonSelect,
     IonSelectOption, 
-    IonList
+    IonList, IonButton
     ]
 })
-export class SelectComponent  implements OnInit {
 
-  constructor() { }
+
+ // Número de clics para considerar como doble clic
+
+
+export class SelectComponent  implements OnInit {
+  clickCount: number = 0;
+  doubleClickThreshold: number = 2;
+  
+  
+  constructor(private router: Router) {}
 
   ngOnInit() {}
 
@@ -30,6 +41,8 @@ export class SelectComponent  implements OnInit {
   openSelect(select: IonSelect) {
     select.open();
   }
+
+  
 
   closeSelect(select: IonSelect) {
     new select.ionDismiss();
@@ -51,6 +64,22 @@ export class SelectComponent  implements OnInit {
         break;
       default:
         break;
+    }
+  }
+
+  handleDoubleClick(destination: string) {
+    this.clickCount++;
+
+    if (this.clickCount === this.doubleClickThreshold) {
+      // Realizar la navegación a la página de productos (o cualquier otra página)
+      this.router.navigate([destination]);
+      // Reiniciar el contador después de realizar la acción
+      this.clickCount = 0;
+    } else {
+      // Reiniciar el contador si no se alcanza el umbral
+      setTimeout(() => {
+        this.clickCount = 0;
+      }, 15000); // Reiniciar después de 300 ms (ajusta según tus necesidades)
     }
   }
   

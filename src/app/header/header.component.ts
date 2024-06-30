@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule,  } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
-import { RouterLink, RouterLinkActive, RouterModule } from '@angular/router';
-import { MenuController } from '@ionic/angular';
+import { Router, RouterLink, RouterLinkActive, RouterModule } from '@angular/router';
+import { SelectComponent } from '../select/select.component';
 import { MenuComponent } from '../menu/menu.component';
+import { AuthService } from '../service/auth.service';
 
 
 @Component({
@@ -16,13 +17,13 @@ import { MenuComponent } from '../menu/menu.component';
     RouterLink, 
     RouterLinkActive, 
     CommonModule, 
-    RouterModule, IonicModule, FormsModule, MenuComponent
+    RouterModule, IonicModule, FormsModule, MenuComponent, SelectComponent
     ]
 })
 export class HeaderComponent {
   showSubMenu: string | null = null;
 
-  constructor() {}
+  constructor(private router: Router, private authService: AuthService) {}
 
   toggleSubMenu(menuItem: string) {
     if (this.showSubMenu === menuItem) {
@@ -32,13 +33,23 @@ export class HeaderComponent {
     }
   }
 
-  openCart() {
-    console.log('Open cart');
-    // Implementa la lógica para abrir el carrito
+  ngOnInit(): void {
+    // Implementa aquí la lógica de inicialización necesaria
   }
 
   openProfile() {
-    console.log('Open profile');
-    // Implementa la lógica para abrir el perfil
+    if (this.authService.isAuthenticated()) {
+      this.router.navigateByUrl('/perfil');
+    } else {
+      this.router.navigateByUrl('/loginuser');
+    }
   }
+
+  openCart() {
+    console.log('Open cart');
+    this.router.navigateByUrl('/pago');  }
+
+    Inicio() {
+      console.log('Open cart');
+      this.router.navigateByUrl('/home');  }
 }

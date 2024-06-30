@@ -1,16 +1,17 @@
 
 <div class="seleccionable">
   <ion-item class="centrado">
+    <ion-button (click)="handleDoubleClick('register')">
     <ion-label>DESKTOPS</ion-label>
-    <ion-select interface="popover"  trigger="bottom-end" side="bottom" alignment="start"class="select-pequeno popover-custom" (ionChange)="redireccionar($event.detail.value)">
-      
+  </ion-button>
+    <ion-select interface="popover"  trigger="bottom-end" side="bottom" alignment="start"class="select-pequeno" (ionChange)="redireccionar($event.detail.value)">
       <ion-select-option value="opcion1">Gaming</ion-select-option>
       <ion-select-option value="opcion2">Working</ion-select-option>
       <ion-select-option value="opcion3">Parts</ion-select-option>
     </ion-select>
   </ion-item>
 
-  <ion-item class="centrado">
+  <ion-item class="despegable">
     <ion-label>LAPTOPS</ion-label>
     <ion-select interface="popover" class="select-pequeno" (ionChange)="redireccionar($event.detail.value)">
       <ion-select-option value="opcion1">Gaming</ion-select-option>

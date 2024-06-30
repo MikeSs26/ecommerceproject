@@ -1,14 +1,28 @@
 .seleccionable {
-  display: flex; 
-  justify-content: center; 
+  display: flex;
+  justify-content: center;
   align-items: center;
-  margin-bottom: 10px; /* Espacio en la parte inferior */
+  width: 100%;
+  font-size: 14px; /* Ajusta el tamaño de fuente según sea necesario */
+  padding: 8px 16px; /* Ajusta el espaciado interno según sea necesario */
+  --background: #000000; /* Cambia el color de fondo del toolbar */
+  --color: #ffffff; /* Cambia el color del texto en el toolbar */
 }
-
+ion-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 14px; /* Ajusta el tamaño de fuente según sea necesario */
+  padding: 8px 16px; /* Ajusta el espaciado interno según sea necesario */
+  --background: #000000; /* Cambia el color de fondo del toolbar */
+  --color: #ffffff; /* Cambia el color del texto en el toolbar */
+}
 .select-pequeno {
-  font-size: 16px; /* Tamaño de fuente ajustado */
+  font-size: 26px; /* Tamaño de fuente ajustado */
+
 }
 
 .seleccionable ion-label {
-  --color: white; /* Color del texto */
+  --color: rgb(255, 255, 255); /* Color del texto */
 }
