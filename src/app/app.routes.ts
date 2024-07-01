@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { ProductDetailPage } from './product-detail/product-detail.page';
 
 
 
@@ -33,13 +34,11 @@ export const routes: Routes = [
     loadComponent: () => import('./perfil/perfil.page').then( m => m.PerfilPage)
   },
 
-
-  
-
-
-  
-  
-  
-
+  { path: 'product-detail/:productId', component: ProductDetailPage },
+  {
+    path: 'product-detail',
+    loadComponent: () => import('./product-detail/product-detail.page').then( m => m.ProductDetailPage)
+  },
 
 ];
+  

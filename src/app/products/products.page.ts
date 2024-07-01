@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonTitle, IonToolbar, IonButton, IonIcon } from '@ionic/angular/standalone';
-import { Router } from '@angular/router';
+import { Router,RouterLink } from '@angular/router';
 import axios from 'axios';
 import { CarritoService } from '../service/carrito.services';
+import { FooterComponent } from '../footer/footer.component';
 
 interface Brand {
   id_brand: number;
@@ -37,7 +38,7 @@ interface ProductImage {
     CommonModule,
     FormsModule,
     IonButton,
-    IonIcon
+    IonIcon, FooterComponent, RouterLink
   ]
 })
 export class ProductsPage {

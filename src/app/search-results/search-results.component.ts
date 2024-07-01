@@ -45,11 +45,11 @@ export class SearchResultsComponent implements OnInit {
   }
 
   navigateToProduct(product: any) {
-    this.router.navigateByUrl(`/products`).then(() => {
+    // Navegar a la página de detalle del producto con el ID del producto
+    this.router.navigateByUrl(`/product-detail/${product.id_product}`).then(() => {
       this.showResults = false; // Cerrar contenedor de resultados después de la navegación
     });
   }
-
   closeResultsContainer() {
     this.showResults = false; // Método para cerrar el contenedor de resultados
   }

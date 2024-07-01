@@ -22,6 +22,17 @@ export class ProductService {
     }
   }
 
+  getProductById(productId: string): Promise<any> {
+    const url = `${this.apiUrl}/${productId}`;
+    return axios.get(url)
+      .then(response => response.data)
+      .catch(error => {
+        // Manejo de errores, por ejemplo, lanzar un error o devolver un valor por defecto
+        console.error('Error fetching product details: ', error);
+        throw error;
+      });
+  }
+
   async searchProductsByName(query: string): Promise<any[]> {
     try {
       const response = await axios.get(this.apiUrl, {

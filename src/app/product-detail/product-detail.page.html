@@ -1,0 +1,23 @@
+<!-- product-detail.page.html -->
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detalles del Producto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="ion-text-center ion-align-items-center ion-justify-content-center">
+    <ion-card *ngIf="product">
+      <ion-card-header>
+        <ion-card-title>{{ product.name }}</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <p><strong>Descripción:</strong> {{ product.description }}</p>
+        <p><strong>Precio:</strong> {{ product.price | currency }}</p>
+        <!-- Otros detalles del producto -->
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

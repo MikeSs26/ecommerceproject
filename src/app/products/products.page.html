@@ -1,20 +1,23 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
-integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-<ion-content class="productos">   
-  <h1>PRODUCTOS</h1>
+<ion-content class="productos">
   <div class="contenedor">
-    <!-- Listita Productos :D-->
     <div class="contenedor-item" *ngFor="let product of products">
       <div class="item">
-        <span class="titulo">{{product.name}}</span>
-        <img [src]="product.image" alt="{{product.name}}" class="img-item">
-        <span class="marca">{{product.brand.name}}</span>
-        <span class="precio">{{product.price | currency}}</span>
-        
-        <ion-button tabindex="0" (click)="CarritoService.addToCart(product)" (keydown)="handleKeyDown($event, CarritoService.addToCart, product)">Agregar al Carrito</ion-button>
+        <!-- Enlace al detalle del producto -->
+        <a [routerLink]="['/product-detail', product.id_product]">
+          <div class="titulo">{{product.name}}</div>
+        </a>
+        <div>
+          <img [src]="product.image" alt="{{product.name}}" class="img-item">
+        </div>
+        <div class="marca">{{product.brand.name}}</div>
+        <div class="precio">{{product.price | currency}}</div>
+        <div>
+          <ion-button tabindex="0" (click)="CarritoService.addToCart(product)" (keydown)="handleKeyDown($event, CarritoService.addToCart, product)">Agregar al Carrito</ion-button>
+        </div>
       </div>
     </div>
+  
 
     <!-- Carrito vacío -->
     <div *ngIf="CarritoService.cartItems.length === 0" class="carrito-vacio">
@@ -28,12 +31,10 @@ integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pB
         <h4>Tu Carrito</h4>
       </div>
       <div class="carrito-item" *ngFor="let item of CarritoService.cartItems">
-        <!-- imagen del producto-->
         <div class="carrito-item-detalles">
           <img [src]="item.image" alt="" class="img-item">
           <span class="titulo">{{item.name}}</span>
           <div class="selector-cantidad">
-            <!-- iconos de sumar y quitar-->
             <i class="fa-solid fa-minus" (click)="CarritoService.decreaseQuantity(item)" (keydown)="handleKeyDown($event, CarritoService.decreaseQuantity, item)"></i>
             <input type="text" [value]="item.quantity" class="carrito-item-cantidad" readonly>
             <i class="fa-solid fa-plus" (click)="CarritoService.increaseQuantity(item)" (keydown)="handleKeyDown($event, CarritoService.increaseQuantity, item)"></i>
@@ -42,21 +43,18 @@ integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pB
             <span class="carrito-item-precio">{{item.price * item.quantity | currency}}</span>
           </div>
         </div>
-          <!-- boton de eliminar -->
-          <div class="eliminar">
-            <i class="fa-solid fa-trash" (click)="CarritoService.removeFromCart(item)" (keydown)="handleKeyDown($event, CarritoService.removeFromCart, item)"></i> 
-          </div>
-        
+        <div class="eliminar">
+          <i class="fa-solid fa-trash" (click)="CarritoService.removeFromCart(item)" (keydown)="handleKeyDown($event, CarritoService.removeFromCart, item)"></i>
+        </div>
       </div>
-<!-- Pagar Section -->
       <div class="carrito-total">
         <div class="fila">
-          <span class="carrito-precio-total">
-            Su Total es {{ CarritoService.getTotalPrice() | currency }}
-          </span>
+          <span class="carrito-precio-total">Su Total es {{ CarritoService.getTotalPrice() | currency }}</span>
         </div>
         <ion-button (click)="checkout()" (keydown)="handleKeyDown($event, checkout)">Pagar</ion-button>
       </div>
     </div>
   </div>
+  <app-footer></app-footer>
 </ion-content>
+

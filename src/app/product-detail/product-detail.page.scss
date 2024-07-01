@@ -1,0 +1,19 @@
+
+ion-content {
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  ion-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Usamos 100vh para que el contenedor ocupe toda la altura de la pantalla */
+    padding: 20px;
+    box-sizing: border-box;
+  
+  }
