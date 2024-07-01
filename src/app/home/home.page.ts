@@ -1,7 +1,6 @@
   import { Component } from '@angular/core';
   import { FondoComponent } from '../fondo/fondo.component';
   import { MainCardsComponent } from '../components/main-cards/main-cards.component';
-  import { CarruselComponent } from '../carrusel/carrusel.component';
   import { FooterComponent } from '../components/footer/footer.component';
   import { IonContent,
       IonGrid,
@@ -21,7 +20,6 @@
     imports: [ IonContent,
       FondoComponent,
       MainCardsComponent,
-      CarruselComponent,
       FooterComponent,
       IonGrid,
       IonRow,
