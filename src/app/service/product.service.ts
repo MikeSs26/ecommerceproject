@@ -7,7 +7,7 @@ import axios from 'axios';
 export class ProductService {
   private apiUrl = 'http://localhost:8080/api/products';
   private apiUrl2 = 'http://localhost:8080/api/productimages';
-  private productosIds = [1, 2]; // IDs de productos seleccionados
+  private productosIds = [1, 5]; // IDs de productos seleccionados
 
 
   constructor() {}
@@ -87,4 +87,16 @@ getProductsByCategory(categoryId: number): Promise<any[]> {
       throw error; // Puedes manejar el error según tus necesidades
     });
 }
+
+getImageById(productId: string): Promise<any> {
+  const url = `${this.apiUrl2}?fk_product=${productId}`;
+  return axios.get(url)
+    .then(response => response.data)
+    .catch(error => {
+      // Manejo de errores, por ejemplo, lanzar un error o devolver un valor por defecto
+      console.error('Error fetching product details: ', error);
+      throw error;
+    });
+}
+
 }
