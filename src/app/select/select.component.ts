@@ -7,7 +7,7 @@ import {
   IonList,
   IonButton
   } from '@ionic/angular/standalone';
-import { Router, RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -29,6 +29,7 @@ import { Router, RouterLink } from '@angular/router';
 
 export class SelectComponent  implements OnInit {
   clickCount: number = 0;
+  static seleccion: number;
   doubleClickThreshold: number = 2;
   
   
@@ -48,23 +49,68 @@ export class SelectComponent  implements OnInit {
     new select.ionDismiss();
   }
 
+  
+
   redireccionar(opcionSeleccionada: string) {
     switch (opcionSeleccionada) {
       case 'opcion1':
-        window.location.href = "products";
+        SelectComponent.seleccion = 1;
         break;
       case 'opcion2':
-        window.location.href = "products";
+        SelectComponent.seleccion = 2;
         break;
       case 'opcion3':
-        window.location.href = "products";
+        SelectComponent.seleccion = 3;
         break;
-        case 'opcion4':
-        window.location.href = "products";
+      case 'opcion4':
+        SelectComponent.seleccion = 4;
+        break;
+      case 'opcion5':
+        SelectComponent.seleccion = 5;
+        break;
+      case 'opcion6':
+        SelectComponent.seleccion = 6;
+        break;
+      case 'opcion7':
+        SelectComponent.seleccion = 7;
+        break;
+      case 'opcion8':
+        SelectComponent.seleccion = 8;
+        break;
+      case 'opcion9':
+        SelectComponent.seleccion = 9;
+        break;
+      case 'opcion10':
+        SelectComponent.seleccion = 10;
+        break;
+      case 'opcion11':
+        SelectComponent.seleccion = 11;
+        break;
+      case 'opcion12':
+        SelectComponent.seleccion = 12;
+        break;
+      case 'opcion13':
+        SelectComponent.seleccion = 13;
+        break;
+      case 'opcion14':
+        SelectComponent.seleccion = 14;
+        break;
+      case 'opcion15':
+        SelectComponent.seleccion = 15;
+        break;
+        case 'opcion16':
+        SelectComponent.seleccion = 16;
+        break;
+      case 'opcion17':
+        SelectComponent.seleccion = 17;
         break;
       default:
+        SelectComponent.seleccion = 0;
         break;
     }
+
+    localStorage.setItem('seleccion', SelectComponent.seleccion.toString());
+    window.location.href = "products";
   }
 
   handleDoubleClick(destination: string) {

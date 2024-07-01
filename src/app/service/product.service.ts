@@ -66,6 +66,7 @@ export class ProductService {
 
 
 
+
 getProductsByCategory(categoryId: number): Promise<any[]> {
   const url = `${this.apiUrl}?fk_subcategory=${categoryId}`;
   return axios.get<any[]>(url)

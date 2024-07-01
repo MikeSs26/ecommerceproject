@@ -8,8 +8,10 @@ integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pB
     <div class="contenedor-item" *ngFor="let product of products">
       <div class="item">
         <span class="titulo">{{product.name}}</span>
-        <img [src]="product.image" alt="" class="img-item">
+        <img [src]="product.image" alt="{{product.name}}" class="img-item">
+        <span class="marca">{{product.brand.name}}</span>
         <span class="precio">{{product.price | currency}}</span>
+        
         <ion-button tabindex="0" (click)="CarritoService.addToCart(product)" (keydown)="handleKeyDown($event, CarritoService.addToCart, product)">Agregar al Carrito</ion-button>
       </div>
     </div>
