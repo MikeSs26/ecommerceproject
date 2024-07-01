@@ -1,0 +1,31 @@
+
+
+.navigation-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: transparent; /* Hace que el fondo sea transparente */
+  height: 100%;
+  border: none; /* Remueve el borde */
+  margin-top: auto;
+}
+
+.navigation-button img.boton {
+  width: 54px; /* Ajusta el tamaño del icono */
+  height: 54px;
+}
+ 
+.custom-card-content {
+  background-color: rgba(0, 0, 0, 0.318); /* Cambia el color y la opacidad del fondo */
+  padding: 10px; /* Añade espacio dentro de la tarjeta */
+  border-radius: 20px; /* Añade esquinas redondeadas */
+  color: rgb(255, 255, 255);
+}
+
+.custom-grid {
+  padding: 10px; /* Añade espacio dentro del grid */
+  background-color: rgba(0, 0, 0, 0.204); /* Cambia el color y la opacidad del fondo */
+  border-radius: 20px; /* Añade esquinas redondeadas */
+
+}

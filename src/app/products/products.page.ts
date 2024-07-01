@@ -3,10 +3,12 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent,  IonTitle, IonToolbar, IonButton, IonIcon } from '@ionic/angular/standalone';
 import { Router } from '@angular/router';
-import {CarritoService} from '../service/carrito.services';
+import { CarritoService } from '../service/carrito.services';
+import axios from 'axios';
+import { Title } from '@angular/platform-browser';
 
 interface Product {
-  title: string;
+  name: string;
   price: number;
   image: string;
 }
@@ -27,23 +29,35 @@ interface Product {
   ]
 })
 
-  export class ProductsPage {
-    products: Product[] = [
-      { title: 'Articulo 1', price: 150.00, image: '' },
-      { title: 'Articulo 2', price: 2500.00, image: '' },
-      // Agregar productos 
-    ];
+export class ProductsPage {
+  products: Product[] = [];
+  constructor(private router: Router, public CarritoService: CarritoService) {
+    this.fetchProducts();
+  }
   
-    constructor(private router: Router, public CarritoService: CarritoService) {}
+  fetchProducts() {
+    axios.get('http://localhost:8080/api/products?fk_subcategory=1')
+      .then(response => {
+        // Asigna los datos de la respuesta al array products
+        this.products = response.data.map((product: any) => ({
+          name: product.name,
+          price: product.price,
+          image: product.image
+        }));
+      })
+      .catch(error => {
+        console.error('Error fetching products:', error);
+      });
+  }
 
-    checkout() {
-      this.router.navigate(['/pago']);
+  checkout() {
+    this.router.navigate(['/pago']);
+  }
+
+  handleKeyDown(event: KeyboardEvent, action: Function, ...args: any[]) {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      action(...args);
     }
-
-    handleKeyDown(event: KeyboardEvent, action: Function, ...args: any[]) {
-      if (event.key === 'Enter' || event.key === ' ') {
-        event.preventDefault();
-        action(...args);
-      }
   }
 }

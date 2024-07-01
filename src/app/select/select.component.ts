@@ -83,4 +83,7 @@ export class SelectComponent  implements OnInit {
     }
   }
   
+   navigateToCategory(category: string) {
+    this.router.navigate(['/product-list', { category }]);
+  }
 }

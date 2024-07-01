@@ -7,7 +7,7 @@ integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pB
     <!-- Listita Productos :D-->
     <div class="contenedor-item" *ngFor="let product of products">
       <div class="item">
-        <span class="titulo">{{product.title}}</span>
+        <span class="titulo">{{product.name}}</span>
         <img [src]="product.image" alt="" class="img-item">
         <span class="precio">{{product.price | currency}}</span>
         <ion-button tabindex="0" (click)="CarritoService.addToCart(product)" (keydown)="handleKeyDown($event, CarritoService.addToCart, product)">Agregar al Carrito</ion-button>
@@ -29,7 +29,7 @@ integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pB
         <!-- imagen del producto-->
         <div class="carrito-item-detalles">
           <img [src]="item.image" alt="" class="img-item">
-          <span class="titulo">{{item.title}}</span>
+          <span class="titulo">{{item.name}}</span>
           <div class="selector-cantidad">
             <!-- iconos de sumar y quitar-->
             <i class="fa-solid fa-minus" (click)="CarritoService.decreaseQuantity(item)" (keydown)="handleKeyDown($event, CarritoService.decreaseQuantity, item)"></i>

@@ -6,6 +6,9 @@ import axios from 'axios';
 })
 export class ProductService {
   private apiUrl = 'http://localhost:8080/api/products';
+  private apiUrl2 = 'http://localhost:8080/api/productimages';
+  private productosIds = [1, 2]; // IDs de productos seleccionados
+
 
   constructor() {}
 
@@ -32,7 +35,44 @@ export class ProductService {
       throw error;
     }
   }
+
+  async getProductosSeleccionados(): Promise<any[]> {
+    try {
+      const response = await axios.get<any[]>(this.apiUrl);
+      // Filtrar productos basados en los IDs predefinidos
+      const productosSeleccionados = response.data.filter(producto =>
+        this.productosIds.includes(producto.id_product)
+      );
+      return productosSeleccionados;
+    } catch (error) {
+      console.error('Error al obtener productos seleccionados:', error);
+      return [];
+    }
+  }
+
+  async getProductImage(): Promise<any[]> {
+    try {
+      const response = await axios.get<any[]>(this.apiUrl2);
+      // Filtrar productos basados en los IDs predefinidos
+      const urlSeleccionados = response.data.filter(image =>
+        this.productosIds.includes(image.fk_product)
+      );
+      return urlSeleccionados;
+    } catch (error) {
+      console.error('Error al obtener productos seleccionados:', error);
+      return [];
+    }
 }
 
 
 
+getProductsByCategory(categoryId: number): Promise<any[]> {
+  const url = `${this.apiUrl}?fk_subcategory=${categoryId}`;
+  return axios.get<any[]>(url)
+    .then(response => response.data)
+    .catch(error => {
+      console.error(`Error fetching products for category ${categoryId}`, error);
+      throw error; // Puedes manejar el error según tus necesidades
+    });
+}
+}

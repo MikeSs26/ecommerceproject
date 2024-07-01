@@ -1,0 +1,31 @@
+<ion-card *ngIf="productos.length > 0" class="custom-card-content">
+  <ion-card-content class="custom-card-content">
+    <ion-grid class="custom-grid">
+      <ion-row>
+        <ion-col size="1" class="navigation-button" (click)="previousProduct()">
+          <img src="assets/images/atras.png" alt="atras" class="boton">
+        </ion-col>
+        <!-- Columna de la imagen del producto -->
+        <ion-col size="3" class="columna-imagen" [@fadeInOut]>
+          <img [src]="urlimages[currentIndex]?.url" alt="Imagen del producto">
+        </ion-col>
+        <!-- Columna de la información del producto -->
+        <ion-col size="3" class="columna-informacion" [@fadeInOut]>
+          <h2>{{ productos[currentIndex]?.name }}</h2>
+          <p>{{ productos[currentIndex]?.especifications }}</p>
+          <p>Código único: {{ productos[currentIndex]?.unique_product_code }}</p>
+          <p>Número de artículo: {{ productos[currentIndex]?.item_number }}</p>
+          <p>Precio: {{ productos[currentIndex]?.price }}</p>
+          <p>Marca: {{ productos[currentIndex]?.brand?.name }}</p>
+        </ion-col>
+        <!-- Columna de la frase adicional -->
+        <ion-col size="3" class="columna-frase" [@fadeInOut]>
+          <p>LO MEJOR DE LO MEJOR</p>
+        </ion-col>
+        <ion-col size="1" class="navigation-button" (click)="nextProduct()">
+          <img src="assets/images/adelante.png" alt="adelante" class="boton">
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card-content>
+</ion-card>
