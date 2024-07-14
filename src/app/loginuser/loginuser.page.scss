@@ -7,45 +7,52 @@
   padding: 20px;
   box-sizing: border-box;
   background-size: cover; /* Ajusta la imagen para cubrir toda el área del contenedor */
+}
 
   .form-icon-container {
     text-align: center;
-    margin-bottom: 20px; /* Espacio bajo el icono */
+    margin-bottom: 30px;
     
   }
 
-  .form-item {
-    margin-bottom: 15px; /* Espacio entre los items */
-  }
-  .form-icon {
-    width: 70px; /* Tamaño de la imagen */
-    height: 70px; /* Tamaño de la imagen */
-    /* Ajusta otros estilos según sea necesario */
+  ion-item {
+    margin-bottom: 15px;
+    background-color: #3B383E;
+    color: #D9D9D9;
     border-radius: 30px;
-
   }
+
+  .form-icon {
+    width: 70px;
+    height: 70px; 
+  }
+
   form {
     width: 100%;
     max-width: 400px;
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente para el formulario */
+    background-color:#111;
     padding: 20px;
-    border-radius: 20px; /* Redondea las esquinas del formulario */
+    border-radius: 30px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera para el efecto de elevación */
   }
 
   ion-button {
-    margin-top: 20px;
-    --border-radius: 10px; /* Ajusta el redondeo de las esquinas */
-
-    &.login-button {
-      --background: #363638; /* Cambia este color al que desees para el botón de login */
-      --color: #fff; /* Color del texto del botón de login */
-    }
-    &.register-button {
-      --background: #363638; /* Cambia este color al que desees para el botón de register */
-      --color: #fff; /* Color del texto del botón de register */
-    }
+    margin-top: 0px;
+    font-size: 20px;
+    text-transform: uppercase;
+    align-items: center;
+    border-radius: 30px;
   }
+
+.login-button {
+  --background: #BA56E9;
+  --color: #fff;  
+  border-radius: 30px;
+}
+
+.register-button {
+  --background: #111;
+  --color: #BA56E9;
 }
 
 .error-message {
@@ -64,6 +71,12 @@
   object-fit: cover; /* Ajusta la imagen para cubrir todo el área */
   opacity: 0.8; /* Ajusta la opacidad según sea necesario */
 }
-.form-input {
-  text-align: center; /* Centra el texto del placeholder */
+
+.texto-normal{
+  color: #FFF;
+  text-align: center;
+  font-size: 12px;
+  font-style: normal;
+  text-transform: uppercase;
+  padding-top: 40px;
 }

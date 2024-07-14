@@ -31,7 +31,7 @@
   padding-top: 20px;
 }
 
-.columna1, .columna2, .columna3, .columna4{
+.columna1, .columna2, .columna2-1,.columna3, .columna4{
   color: #FFF;
   font-size: 15px;
   font-style: normal;
@@ -45,6 +45,9 @@
   padding: 5px 0; /* Ajusta el padding para reducir el espacio */
 }
 
+.columna2-1{
+  padding-top: 10px;
+}
 .columna3{
 padding-top: 10px;
 }
