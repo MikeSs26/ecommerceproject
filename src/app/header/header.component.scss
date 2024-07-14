@@ -13,16 +13,23 @@
   
 }
 
-.login-icon, .carrito {
+.login {
   width: 40px; 
   height: auto; 
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 0px;
+  margin-right: 20px;
+  filter: invert(43%) sepia(60%) saturate(5000%) hue-rotate(270deg) brightness(95%) contrast(100%);
+}
+.carrito {
+  width: 40px; 
+  height: auto; 
+  margin-left: 40px;
+  margin-right: 40px;
   filter: invert(43%) sepia(60%) saturate(5000%) hue-rotate(270deg) brightness(95%) contrast(100%);
 }
 
 
-.login-icon:hover, .carrito:hover {
+.login:hover, .carrito:hover {
   opacity: 0.8;
 }
 

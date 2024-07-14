@@ -1,7 +1,7 @@
 .search-results-container {
     position: absolute; /* Posición absoluta para posicionarse relativo al contenedor padre */
     top: 100%; /* Asegura que esté justo debajo del input de búsqueda */
-    left: 83%; /* Centra inicialmente el contenedor horizontalmente */
+    left: 80%; /* Centra inicialmente el contenedor horizontalmente */
     transform: translateX(-50%); /* Ajusta la posición para centrarlo correctamente */
     background-color: white;
     z-index: 1000;
