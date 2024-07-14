@@ -4,9 +4,11 @@
   align-items: center;
   width: 100%;
   font-size: 16px; 
-  --color: #ffffff;
 }
 
 .centrado, .despegable{
   padding-right: 40px;
+}
+.seleccionable ion-label {
+  --color: white; 
 }

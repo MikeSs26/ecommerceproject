@@ -1,10 +1,18 @@
 
+:host {
+  ion-content {
+    --background: #000; /* Establecer el fondo negro */
+
+  }
+}
+
 ion-content {
-    padding-top: 100px;
+  --padding-top: 40px; /* Debe coincidir con la altura de tu encabezado */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
+
   }
   
   ion-card {
@@ -16,4 +24,13 @@ ion-content {
     padding: 20px;
     box-sizing: border-box;
   
+  }
+
+  .image {
+    width: 500px;
+  }
+
+  .fondo {
+    background-color: black; /* Cambia el color de fondo del header */
+
   }

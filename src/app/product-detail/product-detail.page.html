@@ -9,7 +9,10 @@
 <ion-content class="ion-padding">
   <div class="ion-text-center ion-align-items-center ion-justify-content-center">
     <ion-card *ngIf="product">
-      <img src="urlimages.url" alt="{{product.name}}">
+      <!-- Iterar sobre urlimages para mostrar las imágenes -->
+      <div *ngFor="let image of urlimages" class="image">
+        <img [src]="image.url" alt="{{ product.name }}">
+      </div>
       <ion-card-header>
         <ion-card-title>{{ product.name }}</ion-card-title>
       </ion-card-header>
@@ -26,4 +29,6 @@
       </div>
     </ion-card>
   </div>
+  <app-footer></app-footer>
 </ion-content>
+
