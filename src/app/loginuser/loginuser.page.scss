@@ -41,14 +41,13 @@
     font-size: 20px;
     text-transform: uppercase;
     align-items: center;
-    border-radius: 30px;
+    --border-radius: 30px;
   }
 
 .login-button {
   --background: #BA56E9;
-  --color: #fff;  
-  border-radius: 30px;
 }
+
 
 .register-button {
   --background: #111;
