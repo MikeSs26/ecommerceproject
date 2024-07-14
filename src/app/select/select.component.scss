@@ -10,3 +10,9 @@
 .centrado, .despegable{
   padding-right: 40px;
 }
+.seleccionable {
+
+  ion-label{
+    --color: #ffffff;
+  }
+}
