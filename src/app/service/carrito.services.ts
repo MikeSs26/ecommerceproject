@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
 interface Product {
-  title: string;
+  name: string;
   price: number;
   image: string;
 }
@@ -25,7 +25,7 @@ export class CarritoService {
 
   addToCart(product: Product) {
     const items = this.cartItems;
-    const existingItem = items.find(item => item.title === product.title);
+    const existingItem = items.find(item => item.name === product.name);
     if (existingItem) {
       existingItem.quantity++;
     } else {
@@ -35,7 +35,7 @@ export class CarritoService {
   }
 
   removeFromCart(item: CartItem) {
-    const items = this.cartItems.filter(cartItem => cartItem.title !== item.title);
+    const items = this.cartItems.filter(cartItem => cartItem.name !== item.name);
     this.cartItemsSubject.next(items);
   }
 

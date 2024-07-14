@@ -1,8 +1,14 @@
-
 <div class="seleccionable">
   <ion-item class="centrado">
+<<<<<<< HEAD
     <ion-label>DESKTOPS</ion-label>
     <ion-select interface="popover"  trigger="bottom-end" side="bottom" alignment="start"class="select-pequeno" (ionChange)="redireccionar($event.detail.value)">
+=======
+    <ion-button (click)="handleDoubleClick('register')">
+      <ion-label>DESKTOPS</ion-label>
+    </ion-button>
+    <ion-select interface="popover" trigger="bottom-end" side="bottom" alignment="start" class="select-pequeno" (ionChange)="redireccionar($event.detail.value)">
+>>>>>>> 953b8fde845e07b03e130da0d23531eca9d233fd
       <ion-select-option value="opcion1">Gaming</ion-select-option>
       <ion-select-option value="opcion2">Working</ion-select-option>
       <ion-select-option value="opcion3">Parts</ion-select-option>
@@ -12,39 +18,38 @@
   <ion-item class="despegable">
     <ion-label>LAPTOPS</ion-label>
     <ion-select interface="popover" class="select-pequeno" (ionChange)="redireccionar($event.detail.value)">
-      <ion-select-option value="opcion1">Gaming</ion-select-option>
-      <ion-select-option value="opcion2">Apple</ion-select-option>
-      <ion-select-option value="opcion3">Linux</ion-select-option>
-      <ion-select-option value="opcion4">Windows</ion-select-option>
+      <ion-select-option value="opcion4">Gaming</ion-select-option>
+      <ion-select-option value="opcion5">Apple</ion-select-option>
+      <ion-select-option value="opcion6">Linux</ion-select-option>
+      <ion-select-option value="opcion7">Windows</ion-select-option>
     </ion-select>
   </ion-item>
 
   <ion-item class="centrado">
     <ion-label>MOBILES</ion-label>
     <ion-select interface="popover" class="select-pequeno" (ionChange)="redireccionar($event.detail.value)">
-      <ion-select-option value="opcion1">Tablets</ion-select-option>
-      <ion-select-option value="opcion2">Android</ion-select-option>
-      <ion-select-option value="opcion3">Iphone</ion-select-option>
+      <ion-select-option value="opcion8">Tablets</ion-select-option>
+      <ion-select-option value="opcion9">Android</ion-select-option>
+      <ion-select-option value="opcion10">iPhone</ion-select-option>
     </ion-select>
   </ion-item>
 
   <ion-item class="centrado">
     <ion-label>COMPONENTS</ion-label>
     <ion-select interface="popover" class="select-pequeno" (ionChange)="redireccionar($event.detail.value)">
-      <ion-select-option value="opcion1">Motherboards</ion-select-option>
-      <ion-select-option value="opcion2">Memories</ion-select-option>
-      <ion-select-option value="opcion3">Graphic cards</ion-select-option>
-      <ion-select-option value="opcion4">Processors</ion-select-option>
-
+      <ion-select-option value="opcion11">Motherboards</ion-select-option>
+      <ion-select-option value="opcion12">Memories</ion-select-option>
+      <ion-select-option value="opcion13">Graphic cards</ion-select-option>
+      <ion-select-option value="opcion14">Processors</ion-select-option>
     </ion-select>
   </ion-item>
 
   <ion-item class="centrado">
-    <ion-label>ACCESORIES</ion-label>
+    <ion-label>ACCESSORIES</ion-label>
     <ion-select interface="popover" class="select-pequeno" (ionChange)="redireccionar($event.detail.value)">
-      <ion-select-option value="opcion1">Headphones</ion-select-option>
-      <ion-select-option value="opcion2">Keyboards</ion-select-option>
-      <ion-select-option value="opcion3">MORE</ion-select-option>
+      <ion-select-option value="opcion15">Headphones</ion-select-option>
+      <ion-select-option value="opcion16">Keyboards</ion-select-option>
+      <ion-select-option value="opcion17">MORE</ion-select-option>
     </ion-select>
   </ion-item>
 </div>
