@@ -1,19 +1,14 @@
 
-:host {
-  ion-content {
-    --background: #000; /* Establecer el fondo negro */
-
-  }
-}
-
 ion-content {
   --padding-top: 40px; /* Debe coincidir con la altura de tu encabezado */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
-
-  }
+    --background: #000; /* Establecer el fondo negro */
+    
+}
+  
   
   ion-card {
     display: flex;
@@ -23,7 +18,9 @@ ion-content {
     height: 100vh; /* Usamos 100vh para que el contenedor ocupe toda la altura de la pantalla */
     padding: 20px;
     box-sizing: border-box;
-  
+    --background: #5c595c5c;
+    color: rgb(254, 255, 255);
+    font-weight: bold;
   }
 
   .image {
