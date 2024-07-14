@@ -13,18 +13,17 @@
   
 }
 
-.login-icon {
-  width: 40px; /* Define un ancho fijo o usa porcentajes para que sea responsive */
-  height: auto; /* Altura automática para mantener la proporción */
-  margin-left: 50px; /* Mueve el contenido a la derecha */
+.login-icon, .carrito {
+  width: 40px; 
+  height: auto; 
+  margin-left: 50px;
   margin-right: 50px;
   filter: invert(43%) sepia(60%) saturate(5000%) hue-rotate(270deg) brightness(95%) contrast(100%);
 }
-.carrito {
-  width: 40px; /* Ancho del icono del carrito */
-  height: auto; /* Altura automática para mantener la proporción */
-  margin-left: 100px; /* Mueve el contenido a la derecha */
-  filter: invert(43%) sepia(60%) saturate(5000%) hue-rotate(270deg) brightness(95%) contrast(100%);
+
+
+.login-icon:hover, .carrito:hover {
+  opacity: 0.8;
 }
 
 

@@ -1,50 +1,54 @@
 <ion-content fullscreen>
   <img src="../../assets/images/purple.jpg" alt="fondo2" class="background">
-  
-  <div class="register-container">
-    <form (ngSubmit)="register()" class="form-box">
-      <div class="form-icon-container">
-        <img src="../../assets/images/loginuser.png" alt="Icono" class="form-icon">
-      </div>
-      <div class="form-columns">
-        <div class="form-column">
-          <ion-item>
-            <ion-input placeholder="Nombre" [(ngModel)]="name" name="name" class="form-input" required></ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-input placeholder="Apellido" [(ngModel)]="lastName" name="lastName" class="form-input" required></ion-input>
-          </ion-item>
-          <ion-item>
+  <div class="registrarse">
+    <div class="register-container">
+      <div class="form-and-profile">
+        <form (ngSubmit)="register()" class="form-box">
+          <div class="logo">
+            <img src="../../assets/images/etech-negro.png" alt="Icono" class="form-icon-logo">
+          </div>
+          <p class="titulo">Crea tu cuenta</p>
+          <div class="form-columns">
+            <div class="form-column">
+              <ion-item>
+                <ion-input placeholder="Nombre" [(ngModel)]="name" name="name" class="form-input" required></ion-input>
+              </ion-item>
+            </div>
+            <div class="form-column">
+              <ion-item>
+                <ion-input placeholder="Apellido" [(ngModel)]="lastName" name="lastName" class="form-input" required></ion-input>
+              </ion-item>       
+            </div>
+          </div>
+          <ion-item class="spaced-item">
             <ion-input placeholder="Nombre de Usuario" [(ngModel)]="username" name="username" class="form-input" required></ion-input>
           </ion-item>
-          <ion-item>
+          <ion-item class="spaced-item">
             <ion-input placeholder="Correo Electrónico" [(ngModel)]="email" name="email" class="form-input" required></ion-input>
           </ion-item>
-        </div>
-        <div class="form-column">
-          <ion-item>
+          <ion-item class="spaced-item">
             <ion-input placeholder="Contraseña" [(ngModel)]="password" name="password" type="password" class="form-input" required></ion-input>
           </ion-item>
-          <ion-item>
+          <ion-item class="spaced-item">
             <ion-input placeholder="Número de Teléfono" [(ngModel)]="phoneNumber" name="phoneNumber" class="form-input" required></ion-input>
           </ion-item>
-          <ion-item>
+          <ion-item class="spaced-item">
             <ion-select placeholder="Provincia" [(ngModel)]="province" name="province" class="ion-item2" required>
               <ion-select-option *ngFor="let province of provinces" [value]="province.id_province">
                 {{ province.name }}
               </ion-select-option>
             </ion-select>
-          </ion-item>          
+          </ion-item>
+          <ion-button expand="full" type="submit" class="register-button">Registrar</ion-button>
+          <ion-text class="error-message" color="danger" *ngIf="errorMessage">{{ errorMessage }}</ion-text>
+          <ion-text class="success-message" color="success" *ngIf="successMessage">{{ successMessage }}</ion-text>
+        </form>
+        <div class="form-icon-container">
+          <img src="../../assets/images/loginuser.png" alt="Icono" class="form-icon">
+          <ion-button class="perfil-button">Editar Foto de Perfil</ion-button>
         </div>
       </div>
-      <ion-button expand="full" type="submit" class="register-button">Registrar</ion-button>
-      <ion-text class="error-message" color="danger" *ngIf="errorMessage">{{ errorMessage }}</ion-text>
-      <ion-text class="success-message" color="success" *ngIf="successMessage">
-        {{ successMessage }}
-        <ion-button (click)="redirectToHome()" expand="block">OK</ion-button>
-      </ion-text>
-    </form>
+    </div>
   </div>
   <app-footer></app-footer>
 </ion-content>
-
