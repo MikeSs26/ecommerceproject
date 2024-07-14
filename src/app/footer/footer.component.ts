@@ -1,6 +1,6 @@
-import { HttpClientModule } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
-import { IonFooter, IonToolbar, IonTitle, IonSegmentButton , IonSegment} from '@ionic/angular/standalone';
+import { Component} from '@angular/core';
+import { IonFooter, IonToolbar, IonTitle, IonSegmentButton , IonSegment, IonButton} from '@ionic/angular/standalone';
+import { Router, RouterLink, RouterLinkActive, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
@@ -12,14 +12,18 @@ import { IonFooter, IonToolbar, IonTitle, IonSegmentButton , IonSegment} from '@
     IonToolbar,
     IonTitle,
     IonSegmentButton,
-    IonSegment
+    IonSegment, 
+    IonButton,
+    RouterLink, 
+    RouterLinkActive, 
+    RouterModule
   ]
 })
-export class FooterComponent implements OnInit {
+export class FooterComponent {
  
 
-  constructor() { }
-
-  ngOnInit() {}
-
+  constructor(private router: Router) { }
+  Inicio() {
+    console.log('Open cart');
+    this.router.navigateByUrl('/home');  }
 }

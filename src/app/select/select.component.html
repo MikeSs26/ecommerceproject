@@ -1,9 +1,7 @@
 
 <div class="seleccionable">
   <ion-item class="centrado">
-    <ion-button (click)="handleDoubleClick('register')">
     <ion-label>DESKTOPS</ion-label>
-  </ion-button>
     <ion-select interface="popover"  trigger="bottom-end" side="bottom" alignment="start"class="select-pequeno" (ionChange)="redireccionar($event.detail.value)">
       <ion-select-option value="opcion1">Gaming</ion-select-option>
       <ion-select-option value="opcion2">Working</ion-select-option>

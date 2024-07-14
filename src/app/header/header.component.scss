@@ -18,12 +18,14 @@
   height: auto; /* Altura automática para mantener la proporción */
   max-width: 100%; /* Garantiza que la imagen no se desborde */
   margin-right: 10px;
+  filter: invert(43%) sepia(60%) saturate(5000%) hue-rotate(270deg) brightness(95%) contrast(100%);
 }
 .carrito {
   width: 40px; /* Ancho del icono del carrito */
   height: auto; /* Altura automática para mantener la proporción */
   margin-left: auto; /* Mueve el contenido a la derecha */
   margin-right: 10px; /* Espacio a la derecha */
+  filter: invert(43%) sepia(60%) saturate(5000%) hue-rotate(270deg) brightness(95%) contrast(100%);
 }
 
 

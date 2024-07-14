@@ -1,32 +1,56 @@
 .custom-footer {
-  width: 100%;
-  z-index: 10;
-  
-  --background: black;
-  --ion-toolbar-background: black;
-  --ion-text-color: white;
+  height: auto;
+  background: black;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+}
 
-  ion-toolbar {
-    --background: var(--ion-toolbar-background);
-  }
+.logo {
+  width: 127px;
+  height: 115px;
+  max-width: 100%; /* Garantiza que la imagen no se desborde */
+  margin-left: 50px;
+}
 
-  ion-segment-button {
-    color: var(--ion-text-color);
-    font-size: 10px;
-    padding: 0;
-  }
+.texto {
+  grid-template-columns: repeat(4, 1fr); 
+  color: var(--ion-text-color);
+  display: inline-flex;
+  gap: 200px;
+  padding-left: 170px;
+}
 
-  ion-segment-button.ion-activated {
-    background: #fafafb;
-  }
+.informacion, .atencion, .contactanos, .redes {
+  font-size: 20px;
+  color: white;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  padding-top: 20px;
+}
 
-  ion-segment-button::part(indicator) {
-    background: white;
-  }
+.columna1, .columna2, .columna3, .columna4{
+  color: #FFF;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+  margin: 0; /* Elimina cualquier margen que pueda estar añadiendo espacio extra */
+}
 
-  .footer-title {
-    color: var(--ion-text-color);
-    text-align: center;
-    font-size: 16px;
-  }
+.columna1{
+  padding: 5px 0; /* Ajusta el padding para reducir el espacio */
+}
+
+.columna3{
+padding-top: 10px;
+}
+
+.iconos{
+  display: flex;
+  padding-top: 22px;
+  gap: 20px;
 }
