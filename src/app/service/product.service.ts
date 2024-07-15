@@ -7,7 +7,7 @@ import axios from 'axios';
 export class ProductService {
   private apiUrl = 'http://localhost:8080/api/products';
   private apiUrl2 = 'http://localhost:8080/api/productimages';
-  private productosIds = [1, 5]; // IDs de productos seleccionados
+  private productosIds = [1, 5]; 
 
 
   constructor() {}
@@ -27,7 +27,6 @@ export class ProductService {
     return axios.get(url)
       .then(response => response.data)
       .catch(error => {
-        // Manejo de errores, por ejemplo, lanzar un error o devolver un valor por defecto
         console.error('Error fetching product details: ', error);
         throw error;
       });
@@ -50,7 +49,6 @@ export class ProductService {
   async getProductosSeleccionados(): Promise<any[]> {
     try {
       const response = await axios.get<any[]>(this.apiUrl);
-      // Filtrar productos basados en los IDs predefinidos
       const productosSeleccionados = response.data.filter(producto =>
         this.productosIds.includes(producto.id_product)
       );
@@ -64,7 +62,6 @@ export class ProductService {
   async getProductImage(): Promise<any[]> {
     try {
       const response = await axios.get<any[]>(this.apiUrl2);
-      // Filtrar productos basados en los IDs predefinidos
       const urlSeleccionados = response.data.filter(image =>
         this.productosIds.includes(image.fk_product)
       );
@@ -84,7 +81,7 @@ getProductsByCategory(categoryId: number): Promise<any[]> {
     .then(response => response.data)
     .catch(error => {
       console.error(`Error fetching products for category ${categoryId}`, error);
-      throw error; // Puedes manejar el error según tus necesidades
+      throw error; 
     });
 }
 
@@ -93,7 +90,6 @@ getImageById(productId: string): Promise<any> {
   return axios.get(url)
     .then(response => response.data)
     .catch(error => {
-      // Manejo de errores, por ejemplo, lanzar un error o devolver un valor por defecto
       console.error('Error fetching product details: ', error);
       throw error;
     });

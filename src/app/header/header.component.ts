@@ -39,7 +39,6 @@ export class HeaderComponent {
   }
 
   ngOnInit(): void {
-    // Implementa aquí la lógica de inicialización necesaria
   }
 
   openProfile() {

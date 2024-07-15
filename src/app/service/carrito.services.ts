@@ -85,7 +85,7 @@ export class CarritoService {
   async getPaymentTypes() {
     try {
       const response = await axios.get('http://localhost:8080/api/typepays');
-      return response.data; // Suponiendo que la respuesta contiene un array de objetos { id_type_pay: number, name: string }
+      return response.data; 
     } catch (error) {
       console.error('Error loading payment types:', error);
       throw error;
@@ -95,31 +95,27 @@ export class CarritoService {
   async submitPayment(paymentType: number) {
     try {
       const currentUser = this.authService.getCurrentUser();
-      const date = new Date().toLocaleDateString('en-GB'); // Obtener fecha actual en formato DD/MM/YYYY
+      const date = new Date().toLocaleDateString('en-GB');
       const payload = {
         date: date,
         fk_client: currentUser.id_client,
-        fk_status: 1, // Estado fijo a 1 (ejemplo)
+        fk_status: 1, 
         fk_type_pay: paymentType,
       };
   
-      // Crear la factura
       const response = await axios.post('http://localhost:8080/api/bills', payload);
-      const lastInsertedBillId = response.data.id_bill; // Obtener la ID de la última factura creada
+      const lastInsertedBillId = response.data.id_bill; 
   
-      // Obtener productos del carrito
       const cartItems = this.cartItems;
   
-      // Enviar cada producto a la API billproducts
       for (const item of cartItems) {
         const productPayload = {
-          fk_product: item.id_product, // Suponiendo que tienes un campo id_product en tu producto
+          fk_product: item.id_product, 
           fk_bill: lastInsertedBillId,
         };
         await axios.post('http://localhost:8080/api/billproducts', productPayload);
       }
   
-      // Limpiar carrito después de realizar el pago
       this.clearCart(); 
   
     } catch (error) {
@@ -128,7 +124,6 @@ export class CarritoService {
     }
   }
   
-  // Función auxiliar para asegurar que los números tengan dos dígitos (para el formato DD/MM)
   private padNumber(num: number, length: number): string {
     return num.toString().padStart(length, '0');
   }

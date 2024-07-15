@@ -5,11 +5,11 @@
         <ion-col size="1" class="navigation-button" (click)="previousProduct()">
           <img src="assets/images/atras.png" alt="atras" class="boton">
         </ion-col>
-        <!-- Columna de la imagen del producto -->
+     
         <ion-col size="3" class="columna-imagen" [@fadeInOut]>
           <img [src]="urlimages[currentIndex]?.url" alt="Imagen del producto">
         </ion-col>
-        <!-- Columna de la información del producto -->
+       
         <ion-col size="3" class="columna-informacion" [@fadeInOut]>
           <h2>{{ productos[currentIndex]?.name }}</h2>
           <p>{{ productos[currentIndex]?.especifications }}</p>
@@ -18,7 +18,7 @@
           <p>Precio: {{ productos[currentIndex]?.price }}</p>
           <p>Marca: {{ productos[currentIndex]?.brand?.name }}</p>
         </ion-col>
-        <!-- Columna de la frase adicional -->
+      
         <ion-col size="3" class="columna-frase" [@fadeInOut]>
           <p>{{ productos[currentIndex]?.mensaje_tienda }}</p>
         </ion-col>

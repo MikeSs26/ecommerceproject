@@ -9,7 +9,7 @@
 .logo {
   width: 127px;
   height: 115px;
-  max-width: 100%; /* Garantiza que la imagen no se desborde */
+  max-width: 100%; 
   margin-left: 50px;
 }
 
@@ -38,11 +38,11 @@
   font-weight: 400;
   line-height: normal;
   text-transform: capitalize;
-  margin: 0; /* Elimina cualquier margen que pueda estar añadiendo espacio extra */
+  margin: 0; 
 }
 
 .columna1{
-  padding: 5px 0; /* Ajusta el padding para reducir el espacio */
+  padding: 5px 0; 
 }
 
 .columna2-1{

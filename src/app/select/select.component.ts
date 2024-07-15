@@ -24,9 +24,6 @@ import { Router } from '@angular/router';
 })
 
 
- // Número de clics para considerar como doble clic
-
-
 export class SelectComponent  implements OnInit {
   clickCount: number = 0;
   static seleccion: number;
@@ -117,15 +114,14 @@ export class SelectComponent  implements OnInit {
     this.clickCount++;
 
     if (this.clickCount === this.doubleClickThreshold) {
-      // Realizar la navegación a la página de productos (o cualquier otra página)
       this.router.navigate([destination]);
-      // Reiniciar el contador después de realizar la acción
+    
       this.clickCount = 0;
     } else {
-      // Reiniciar el contador si no se alcanza el umbral
+      
       setTimeout(() => {
         this.clickCount = 0;
-      }, 15000); // Reiniciar después de 300 ms (ajusta según tus necesidades)
+      }, 15000); 
     }
   }
   

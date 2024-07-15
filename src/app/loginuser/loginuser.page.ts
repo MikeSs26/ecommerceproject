@@ -6,13 +6,15 @@ import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { FooterComponent } from '../footer/footer.component';
 import { HeaderComponent } from '../header/header.component';
+import { CustomButtonComponent } from '../custom-button/custom-button.component';
 
 @Component({
   selector: 'app-loginuser',
   templateUrl: './loginuser.page.html',
   styleUrls: ['./loginuser.page.scss'],
   standalone: true,
-  imports: [CommonModule, IonicModule, FormsModule, FooterComponent, HeaderComponent]
+  imports: [CommonModule, IonicModule, FormsModule, FooterComponent, 
+    HeaderComponent, CustomButtonComponent]
 })
 export class LoginuserPage implements OnInit {
   username: string = '';
@@ -23,7 +25,7 @@ export class LoginuserPage implements OnInit {
 
   ngOnInit(): void {}
 
-  async onLogin() {
+   async onLogin() {
     try {
       const isValid = await this.authService.login(this.username, this.password);
       if (isValid) {
@@ -46,7 +48,7 @@ export class LoginuserPage implements OnInit {
         {
           text: 'Listo',
           handler: () => {
-            this.router.navigate(['/home']); // Redirigir a la página de inicio
+            this.router.navigate(['/home']); 
           }
         }
       ]

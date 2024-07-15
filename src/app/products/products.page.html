@@ -3,7 +3,7 @@
   <div class="contenedor">
     <div class="contenedor-item" *ngFor="let product of products">
       <div class="item">
-        <!-- Enlace al detalle del producto -->
+      
         <a [routerLink]="['/product-detail', product.id_product]">
           <div class="titulo">{{product.name}}</div>
         </a>
@@ -19,13 +19,13 @@
     </div>
   
 
-    <!-- Carrito vacío -->
+ 
     <div *ngIf="CarritoService.cartItems.length === 0" class="carrito-vacio">
       <h4>Tu carrito está vacío</h4>
       <p>¡Agrega algunos productos para comenzar!</p>
     </div>
 
-    <!-- Carrito con Articulos-->
+  
     <div *ngIf="CarritoService.cartItems.length > 0" class="carrito">
       <div class="carrito-header">
         <h4>Tu Carrito</h4>
