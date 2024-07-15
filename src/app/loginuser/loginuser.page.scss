@@ -3,10 +3,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Usamos 100vh para que el contenedor ocupe toda la altura de la pantalla */
+  height: 100vh; 
   padding: 20px;
   box-sizing: border-box;
-  background-size: cover; /* Ajusta la imagen para cubrir toda el área del contenedor */
+  background-size: cover; 
 }
 
   .form-icon-container {
@@ -66,9 +66,9 @@
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Asegura que esté detrás de todos los demás elementos */
-  object-fit: cover; /* Ajusta la imagen para cubrir todo el área */
-  opacity: 0.8; /* Ajusta la opacidad según sea necesario */
+  z-index: -1; 
+  object-fit: cover; 
+  opacity: 0.8; 
 }
 
 .texto-normal{

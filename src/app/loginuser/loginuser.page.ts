@@ -46,7 +46,7 @@ export class LoginuserPage implements OnInit {
         {
           text: 'Listo',
           handler: () => {
-            this.router.navigate(['/home']); // Redirigir a la página de inicio
+            this.router.navigate(['/home']); 
           }
         }
       ]

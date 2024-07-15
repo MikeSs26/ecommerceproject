@@ -1,9 +1,9 @@
 ion-content {
-    --padding-top: 120px; /* Debe coincidir con la altura de tu encabezado */
+    --padding-top: 120px; 
   }
 
 .background {
-    position: fixed; /* Cambiado a fixed para mantener el fondo detrás del contenido */
+    position: fixed; 
     top: 0;
     left: 0;
     width: 100%;
@@ -18,19 +18,19 @@ ion-content {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Ajustado para ocupar toda la altura de la pantalla */
+    height: 100vh; 
     padding: 20px;
     box-sizing: border-box;
   }
   
   .form-box {
     width: 100%;
-    max-width: 800px; /* Ancho máximo del formulario según sea necesario */
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
+    max-width: 800px; 
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
-    border-radius: 20px; /* Redondea las esquinas del formulario */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera para el efecto de elevación */
-    position: relative; /* Añadido para posicionar los mensajes de forma relativa */
+    border-radius: 20px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative; 
   }
   
   
@@ -40,10 +40,10 @@ ion-content {
   }
   
   .form-icon {
-    width: 350px; /* Ajusta el tamaño del ícono según sea necesario */
+    width: 350px; 
     height: 350px;
-    object-fit: cover; /* Ajusta el tamaño del ícono sin deformar */
-    border-radius: 50%; /* Redondea el ícono */
+    object-fit: cover; 
+    border-radius: 50%; 
   }
   
   .form-columns {
@@ -54,16 +54,16 @@ ion-content {
   }
   
   .form-column {
-    width: 45%; /* Ancho de cada columna ajustado */
+    width: 45%; 
    
     flex-direction: column;
-    align-items: center; /* Centra el contenido en la columna */
+    align-items: center;
  
   }
   
   
   .form-input {
-    text-align: center; /* Centra el texto del placeholder */
+    text-align: center; 
   }
   
   ion-item {
@@ -81,10 +81,10 @@ ion-content {
   
   ion-button.register-button {
     margin-top: 20px;
-    width: 100%; /* Ancho completo del botón */
-    text-align: center; /* Centra el texto del botón */
-    --background: #363638; /* Cambia este color al que desees para el botón */
-    --color: #fff; /* Color del texto del botón */
+    width: 100%; 
+    text-align: center; 
+    --background: #363638; 
+    --color: #fff; 
   }
   
   ion-text {

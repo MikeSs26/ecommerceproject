@@ -11,10 +11,9 @@ import { IonContent } from '@ionic/angular/standalone';
 })
 export class MenuComponent {
   navigateTo(option: string) {
-    // Aquí puedes implementar la navegación o lógica correspondiente
+  
     console.log('Navigating to:', option);
-    // Ejemplo de navegación a una ruta específica
-    // this.router.navigate([`/category/${option}`]);
+  
   }
 
 }

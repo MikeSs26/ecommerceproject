@@ -21,7 +21,7 @@ export class RegisterPage implements OnInit {
   email: string = '';
   password: string = '';
   phoneNumber: string = '';
-  province: number = 0; // Initially select the first province, you can change this as needed
+  province: number = 0;
   errorMessage: string = '';
   successMessage: string = '';
   provinces: any[] = [];
@@ -60,7 +60,7 @@ export class RegisterPage implements OnInit {
       password: this.password,
       email: this.email,
       phone_number: this.phoneNumber,
-      province: { id_province: this.province } // Ensure province is sent as an object
+      province: { id_province: this.province } 
     };
 
     try {
@@ -72,6 +72,6 @@ export class RegisterPage implements OnInit {
   }
 
   redirectToHome() {
-    this.router.navigate(['/home']); // Reemplaza '/home' con la ruta real de tu home
+    this.router.navigate(['/home']); 
   }
 }

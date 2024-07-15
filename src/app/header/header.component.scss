@@ -1,15 +1,15 @@
-/* header.component.scss */
+
 :host {
   position: relative;
-  z-index: 10; /* Asegura que el header esté en un nivel por debajo del contenedor de resultados */
+  z-index: 10;
 }
 
 .toolbar {
-  --background-color: black; /* Cambia el color de fondo del header */
+  --background-color: black; 
   z-index: 1; 
-   --ion-toolbar-height: 50px; /* Ajusta la altura según sea necesario */
-  --ion-background-color: black; /* Cambia el color de fondo del toolbar */
-  --color: white; /* Cambia el color del texto en el toolbar */
+   --ion-toolbar-height: 50px;
+  --ion-background-color: black; 
+  --color: white; 
   
 }
 
@@ -35,16 +35,16 @@
 
 
 .logo {
-  width: 90px; /* Define un ancho fijo o usa porcentajes para que sea responsive */
-  height: auto; /* Altura automática para mantener la proporción */
-  max-width: 100%; /* Garantiza que la imagen no se desborde */
+  width: 90px;
+  height: auto; 
+  max-width: 100%; 
   margin-left: 40px;
 }
 
 
 .results-wrapper {
-  position: relative; /* Asegura que el contenedor padre tenga posición relativa */
+  position: relative; 
   display: flex;
-  justify-content: right; /* Centra horizontalmente el contenido del wrapper */
+  justify-content: right; 
 }
 

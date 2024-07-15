@@ -1,6 +1,5 @@
 <ion-list *ngIf="showResults" class="search-results-container">
   <ion-item *ngFor="let product of searchResults" (click)="navigateToProduct(product)">
-    <!-- Aquí va la información del producto que deseas mostrar -->
     {{ product.name }} - {{ product.description }}
   </ion-item>
 </ion-list>

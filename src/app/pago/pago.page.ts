@@ -17,13 +17,13 @@ import { CarritoService } from '../service/carrito.services';
 })
 export class PagoPage implements OnInit {
   paymentTypes: any[] = [];
-  selectedPaymentType: number = 0; // Inicializamos con un valor por defecto
+  selectedPaymentType: number = 0; 
   paymentForm: any;
   constructor(
     public carritoService: CarritoService,
-    private formBuilder: FormBuilder // Inyectar FormBuilder
+    private formBuilder: FormBuilder 
   ) {
-    // Inicializar el formulario
+    
     this.paymentForm = this.formBuilder.group({
       cardName: ['', Validators.required],
       cardNumber: ['', Validators.required],
@@ -47,8 +47,8 @@ export class PagoPage implements OnInit {
   submitPaymentForm() {
     if (this.selectedPaymentType !== 0) {
       this.carritoService.submitPayment(this.selectedPaymentType);
-      this.paymentForm.reset(); // Resetear el formulario
-      this.selectedPaymentType = 0; // Reiniciar el tipo de pago seleccionado
+      this.paymentForm.reset(); 
+      this.selectedPaymentType = 0; 
     } else {
       console.error('Seleccione una forma de pago válida antes de continuar.');
     }

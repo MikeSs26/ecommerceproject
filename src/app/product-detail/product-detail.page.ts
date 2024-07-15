@@ -25,13 +25,13 @@ interface ProductImage {
 })
 export class ProductDetailPage implements OnInit {
   productId: string;
-  product: any; // Define el tipo de tu producto aquí
+  product: any; 
   urlimages: ProductImage[] = [];
   seleccion: any;
   products: any;
 
   constructor(private route: ActivatedRoute, private productService: ProductService, public CarritoService: CarritoService) {
-    this.productId = ''; // Inicializar productId como string vacío
+    this.productId = ''; 
   }
 
   ngOnInit() {
@@ -39,10 +39,10 @@ export class ProductDetailPage implements OnInit {
     if (productIdParam !== null) {
       this.productId = productIdParam;
       this.loadProductDetail();
-      this.fetchProductsImage(); // Asegúrate de llamar a este método para obtener las imágenes
+      this.fetchProductsImage(); 
     } else {
       console.error('Product ID is null');
-      // Puedes manejar el caso donde productId es null, por ejemplo, redirigiendo o mostrando un mensaje de error
+     
     }
   }
 
@@ -70,7 +70,7 @@ export class ProductDetailPage implements OnInit {
           this.urlimages = response.data.map((image: any) => ({
             url: image.url,
           }));
-          return response.data; // Asegúrate de devolver los datos correctamente
+          return response.data; 
         }
       })
       .catch(error => {

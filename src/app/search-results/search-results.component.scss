@@ -1,13 +1,13 @@
 .search-results-container {
-    position: absolute; /* Posición absoluta para posicionarse relativo al contenedor padre */
-    top: 100%; /* Asegura que esté justo debajo del input de búsqueda */
-    left: 80%; /* Centra inicialmente el contenedor horizontalmente */
-    transform: translateX(-50%); /* Ajusta la posición para centrarlo correctamente */
+    position: absolute; 
+    top: 100%; 
+    left: 80%; 
+    transform: translateX(-50%); 
     background-color: white;
     z-index: 1000;
     max-height: 300px;
-    width: 80%; /* Ancho inicial, puedes ajustarlo según sea necesario */
-    max-width: 400px; /* Ancho máximo para evitar que se extienda demasiado */
+    width: 80%; 
+    max-width: 400px; 
     overflow-y: auto;
     border: 1px solid #ccc;
     padding: 0 10px; 
@@ -16,16 +16,16 @@
   
   @media (max-width: 768px) {
     .search-results-container {
-      width: 90%; /* Reducir el ancho en pantallas más pequeñas */
-      left: 83%; /* Centra en pantallas más pequeñas */
+      width: 90%; 
+      left: 83%; 
       transform: translateX(-50%);
     }
   }
   
   @media (max-width: 576px) {
     .search-results-container {
-      width: 95%; /* Reducir aún más el ancho en pantallas muy pequeñas */
-      left: 83%; /* Centra en pantallas muy pequeñas */
+      width: 95%; 
+      left: 83%; 
       transform: translateX(-50%);
     }
   }

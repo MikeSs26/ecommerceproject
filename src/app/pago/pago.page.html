@@ -1,6 +1,6 @@
 <ion-content>
   <h4>Carrito de Compras</h4>
-  <!-- Breadcrumbs -->
+  
   <div class="breadcrumb">
     <ion-breadcrumbs>
       <ion-breadcrumb href="#home">Home</ion-breadcrumb>
@@ -18,7 +18,7 @@
     </ion-select>
   </ion-item>
   
-  <!-- Metodos de Pago -->
+ 
   <div class="contenedor">
     <div class="metodos">
       <form (ngSubmit)="submitPaymentForm()" #paymentForm="ngForm">
@@ -46,15 +46,15 @@
       </form>
     </div>
 
-    <!-- Carrito -->
+   
     <div class="carrito">
       <div class="carrito-item" *ngFor="let item of carritoService.cartItems">
-        <!-- imagen del producto-->
+      
         <div class="carrito-item-detalles">
           <img [src]="item.image" alt="" class="img-item">
           <span class="titulo">{{item.name}}</span>
           <div class="selector-cantidad">
-            <!-- cantidad-->
+           
             <p>Cantidad: </p>
             <input type="text" [value]="item.quantity" class="carrito-item-cantidad" readonly>
           </div>
@@ -64,7 +64,7 @@
         </div>
       </div>
 
-      <!-- Pagar Section -->
+     
       <div class="carrito-total">
         <div class="fila">
           <span class="carrito-precio-total">

@@ -16,8 +16,7 @@ import { Router } from '@angular/router';
 })
 export class SearchResultsComponent implements OnInit {
   searchResults: any[] = [];
-  showResults: boolean = false; // Variable para controlar la visibilidad del contenedor de resultados
-
+  showResults: boolean = false; 
   constructor(
     private productService: ProductService,
     private searchService: SearchService,
@@ -34,23 +33,22 @@ export class SearchResultsComponent implements OnInit {
     if (query.trim() !== '') {
       try {
         this.searchResults = await this.productService.searchProductsByName(query);
-        this.showResults = true; // Mostrar resultados cuando la búsqueda es exitosa
+        this.showResults = true; 
       } catch (error) {
         console.error('Error searching products:', error);
       }
     } else {
       this.searchResults = [];
-      this.showResults = false; // Ocultar resultados si la búsqueda está vacía
+      this.showResults = false; 
     }
   }
 
   navigateToProduct(product: any) {
-    // Navegar a la página de detalle del producto con el ID del producto
     this.router.navigateByUrl(`/product-detail/${product.id_product}`).then(() => {
-      this.showResults = false; // Cerrar contenedor de resultados después de la navegación
+      this.showResults = false; 
     });
   }
   closeResultsContainer() {
-    this.showResults = false; // Método para cerrar el contenedor de resultados
+    this.showResults = false;
   }
 }
