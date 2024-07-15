@@ -1,26 +1,79 @@
 ion-content {
-    --background: transparent;
-    position: relative;
-    z-index: 1;
-    color: white; /* Cambia el color según tu fondo para mejor legibilidad */
-  }
-  
-  .section {
-    padding: 86px;
-    margin: 16px;
-    border-radius: 8px;
-    color: #000; /* Ajusta el color del texto si es necesario */
-    background: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente por defecto */
-  }
-  
-  .section1, .section4 {
-    background: transparent;
-  }
-  
-  .section2, .section3 {
-    background: transparent;
-  }
-  
-  ion-content {
-    --padding-top: 56px; /* Debe coincidir con la altura de tu encabezado */
-  }
+  --background: transparent;
+  position: relative;
+  z-index: 1;
+  --padding-top: 56px;
+}
+
+.section {
+  border-radius: 8px;
+  color: #000; /* Ajusta el color del texto si es necesario */
+  background: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente por defecto */
+}
+
+.section1, .section4 {
+  background: transparent;
+}
+
+.section2, .section3 {
+  background: transparent;
+}
+
+body {
+  background-color: #f8fafc;
+}
+
+.container {
+  padding-top: 2rem;
+}
+
+.slider-wrapper {
+  width: auto;
+  align-items: center;
+}
+
+.slider {
+  display: flex;
+  aspect-ratio: 16 / 9;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+  -ms-overflow-style: none; /* Hide scrollbar IE and Edge */
+  scrollbar-width: none; /* Hide scrollbar Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+.slider img {
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: cover;
+}
+
+.slider-nav {
+  display: flex;
+  column-gap: 1rem;
+  position: absolute; 
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.slider-nav a {
+  width: 134px;
+  height: 19px;
+  border-radius: 30px;
+  opacity: 0.75;
+  transition: opacity ease 250ms;
+  background-color: #252628;
+}
+
+.slider-nav a:hover {
+  background-color: #fff;
+  opacity: 1;
+}
