@@ -6,7 +6,7 @@
         <h1>Tu Carrito de Compras</h1>
         <p>Información de Tarjeta</p>
         <ion-item>
-          <ion-label>Pago Express</ion-label>
+          <ion-label>Tipo de Pago</ion-label>
           <ion-select name="paymentType" [(ngModel)]="selectedPaymentType" required>
             <ion-select-option *ngFor="let type of paymentTypes" [value]="type.id_type_pay">
               {{ type.id_type_pay }} - {{ type.name }}
