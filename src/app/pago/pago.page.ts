@@ -37,6 +37,7 @@ export class PagoPage implements OnInit {
 
   ngOnInit() {
     this.loadPaymentTypes();
+    
   }
 
   async loadPaymentTypes() {

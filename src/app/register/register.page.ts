@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ClientService } from '../service/client.service';
 import { Router } from '@angular/router';
-import { IonicModule } from '@ionic/angular';
+import { IonicModule, AlertController } from '@ionic/angular';
 import { FooterComponent } from '../footer/footer.component';
 import { HeaderComponent } from '../header/header.component';
 import { CustomButtonComponent } from '../custom-button/custom-button.component';
@@ -13,8 +13,7 @@ import { CustomButtonComponent } from '../custom-button/custom-button.component'
   templateUrl: './register.page.html',
   styleUrls: ['./register.page.scss'],
   standalone: true,
-  imports: [CommonModule, FormsModule, IonicModule , FooterComponent, 
-    HeaderComponent, CustomButtonComponent]
+  imports: [CommonModule, FormsModule, IonicModule, FooterComponent, HeaderComponent, CustomButtonComponent]
 })
 export class RegisterPage implements OnInit {
   name: string = '';
@@ -28,7 +27,7 @@ export class RegisterPage implements OnInit {
   successMessage: string = '';
   provinces: any[] = [];
 
-  constructor(private clientService: ClientService, private router: Router) {}
+  constructor(private clientService: ClientService, private router: Router, private alertController: AlertController) {}
 
   ngOnInit() {
     this.loadProvinces();
@@ -62,18 +61,35 @@ export class RegisterPage implements OnInit {
       password: this.password,
       email: this.email,
       phone_number: this.phoneNumber,
-      province: { id_province: this.province } 
+      province: { id_province: this.province }
     };
 
     try {
       await this.clientService.registerClient(newClient);
-      this.successMessage = 'Se ha registrado correctamente';
+      this.showSuccessAlert();
     } catch (error) {
       this.errorMessage = 'Error al registrar el usuario';
     }
   }
 
+  async showSuccessAlert() {
+    const alert = await this.alertController.create({
+      header: 'Registro Exitoso',
+      message: 'Se ha registrado correctamente',
+      buttons: [
+        {
+          text: 'OK',
+          handler: () => {
+            this.redirectToHome();
+          }
+        }
+      ]
+    });
+
+    await alert.present();
+  }
+
   redirectToHome() {
-    this.router.navigate(['/home']); 
+    this.router.navigate(['/home']);
   }
 }

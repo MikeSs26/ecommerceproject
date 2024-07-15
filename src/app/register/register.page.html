@@ -39,7 +39,7 @@
               </ion-select-option>
             </ion-select>
           </ion-item>
-          <app-custom-button expand="full" type="submit" class="register-button">Registrar</app-custom-button>
+          <app-custom-button expand="full" (click)="register()" class="register-button">Registrar</app-custom-button>
           <ion-text class="error-message" color="danger" *ngIf="errorMessage">{{ errorMessage }}</ion-text>
           <ion-text class="success-message" color="success" *ngIf="successMessage">{{ successMessage }}</ion-text>
         </form>
