@@ -7,13 +7,13 @@
         <img src="../../assets/images/etech-negro.png" alt="Icono" class="form-icon">
       </div>
       <ion-item class="form-item">
-        <ion-input placeholder="Username" [(ngModel)]="username" name="username" class="form-input" required></ion-input>
+        <ion-input placeholder="Nombre de Usuario" [(ngModel)]="username" name="username" class="form-input" required></ion-input>
       </ion-item>
       
       <ion-item class="form-item with-margin">
-        <ion-input placeholder="Password" [(ngModel)]="password" name="password" type="password" class="form-input" required></ion-input>
+        <ion-input placeholder="Contraseña" [(ngModel)]="password" name="password" type="password" class="form-input" required></ion-input>
       </ion-item>
-      <ion-button expand="full" type="submit" class="login-button">Login</ion-button>
+      <app-custom-button expand="full" (click)="onLogin()" class="login-button">Login</app-custom-button>
       <div class ="texto-normal" style="text-align: center;"> ¿no tienes una cuenta? regístrate ya</div>
       <ion-button expand="full" (click)="goToRegister()" class="register-button">Register</ion-button>
       <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
