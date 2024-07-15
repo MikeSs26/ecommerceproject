@@ -2,17 +2,23 @@
 <ion-content>
   <section class="container">
     <div class="slider-wrapper">
-      <div class="slider">
-        <img id="slide-1" src="https://images.unsplash.com/photo-1656464868371-602be27fd4c2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80" alt="video" />
-        <img id="slide-2" src="https://images.unsplash.com/photo-1657586640569-4a3d4577328c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80" alt="ilus2" />
-        <img id="slide-3" src="https://images.unsplash.com/photo-1656077217715-bdaeb06bd01f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80" alt="ilus3" />
-        <img id="slide-4" src="https://images.unsplash.com/photo-1656077217715-bdaeb06bd01f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80" alt="ilus4" />
+      <div class="slider" #slider>
+        <video id="slide-1" autoplay muted loop>
+          <source src="../../assets/images/video.mp4" type="video/mp4">
+          Tu navegador no soporta la etiqueta de video.
+          <track label="English" kind="captions" srclang="en" src="resources/myvideo-en.vtt" default>
+          <track label="Deutsch" kind="captions" srclang="de" src="resources/myvideo-de.vtt">
+          <track label="Español" kind="captions" srclang="es" src="resources/myvideo-es.vtt">
+        </video>
+        <img id="slide-2" src="../../assets/images/image1.png" alt="ilus2" />
+        <img id="slide-3" src="../../assets/images/image2.png" alt="ilus3" />
+        <img id="slide-4" src="../../assets/images/image3.png" alt="ilus4" />
       </div>
       <div class="slider-nav">
-        <a href="#slide-1"></a>
-        <a href="#slide-2"></a>
-        <a href="#slide-3"></a>
-        <a href="#slide-4"></a>
+        <a (click)="navigateToSlide(0)"></a>
+        <a (click)="navigateToSlide(1)"></a>
+        <a (click)="navigateToSlide(2)"></a>
+        <a (click)="navigateToSlide(3)"></a>
       </div>
     </div>
   </section>

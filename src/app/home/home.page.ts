@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 import { IonContent} from '@ionic/angular/standalone';
 import { HeaderComponent } from '../header/header.component';
 import { SelectComponent } from '../select/select.component';
@@ -16,11 +16,27 @@ import { BannerComponent } from '../banner/banner.component';
     SelectComponent,
     IonContent, 
     FondoComponent,
-   IonContent, 
-   MenuComponent,
-   FooterComponent, BannerComponent],
+    IonContent, 
+    MenuComponent,
+    FooterComponent, 
+    BannerComponent
+  ],
 })
-export class HomePage {
+
+export class HomePage implements AfterViewInit {
+  @ViewChild('slider') slider!: ElementRef<HTMLDivElement>;
 
   constructor() {}
+
+  ngAfterViewInit() {
+    this.slider.nativeElement.scrollLeft = 0;
+  }
+
+  navigateToSlide(index: number) {
+    const slideWidth = this.slider.nativeElement.clientWidth;
+    this.slider.nativeElement.scroll({
+      left: slideWidth * index,
+      behavior: 'smooth'
+    });
+  }
 }
