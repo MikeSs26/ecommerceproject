@@ -91,3 +91,11 @@ ion-content {
     margin-top: 10px;
   }
   
+  .form-container {
+    .save-button {
+      &.disabled {
+        opacity: 0.5; /* Tono opaco */
+        pointer-events: none; /* Deshabilita eventos de clic */
+      }
+    }
+  }

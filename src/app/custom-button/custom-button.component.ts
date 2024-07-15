@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
@@ -18,4 +18,5 @@ export class CustomButtonComponent {
     this.clicked.emit();
   }
 
+  @Input() disabled: boolean = false;
 }
