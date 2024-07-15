@@ -6,6 +6,7 @@ import { ActivatedRoute } from '@angular/router';
 import { ProductService } from '../service/product.service';
 import { CarritoService } from '../service/carrito.services';
 import { FooterComponent } from '../footer/footer.component';
+import { CustomButtonComponent } from '../custom-button/custom-button.component';
 import axios from 'axios';
 
 interface ProductImage {
@@ -19,8 +20,15 @@ interface ProductImage {
   templateUrl: './product-detail.page.html',
   styleUrls: ['./product-detail.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, 
-    FooterComponent],
+  imports: [IonContent, 
+    IonHeader, 
+    IonTitle, 
+    IonToolbar, 
+    CommonModule, 
+    FormsModule, 
+    FooterComponent, 
+    CustomButtonComponent
+  ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class ProductDetailPage implements OnInit {

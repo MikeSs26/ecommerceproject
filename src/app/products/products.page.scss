@@ -1,13 +1,17 @@
-
-ion-content {
-  --padding-top: 100px; /* Debe coincidir con la altura de tu encabezado */
-}
-
-.productos {
-  padding: 20px;
+.background {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  opacity: 0.8;
 }
 
 .contenedor {
+  margin-top: 110px;
+  padding: 80px;
   display: flex;
   flex-wrap: wrap;
   gap: 0px; /* Espacio entre elementos */
@@ -25,26 +29,30 @@ ion-content {
 
 .item {
   padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 30px;
+  width: 436px;
+  height: auto;
+  border: 2px solid #766286;
+  background: rgba(32, 32, 32, 0.80);
 }
 
 .item img {
-  max-width: 100%;
-  height: auto;
   margin-bottom: 10px;
+  width: 372px;
+  height: auto;
+  border: 1px solid #ccc;
 }
 
 .titulo {
   font-size: 1.2em;
   font-weight: bold;
 }
-
-.marca {
-  font-size: 0.9em;
+.precio, .titulo {
+  color: #FFF;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 54px */
+  text-transform: uppercase;
 }
 
-.precio {
-  font-size: 1.1em;
-  font-weight: bold;
-}

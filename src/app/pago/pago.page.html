@@ -1,78 +1,73 @@
 <ion-content>
-  <h4>Carrito de Compras</h4>
-  
-  <div class="breadcrumb">
-    <ion-breadcrumbs>
-      <ion-breadcrumb href="#home">Home</ion-breadcrumb>
-      <ion-breadcrumb href="#products">Products</ion-breadcrumb>
-      <ion-breadcrumb href="#pago">¡A Pagar!</ion-breadcrumb>
-    </ion-breadcrumbs>
-  </div>
-
-  <ion-item>
-    <ion-label position="floating">Forma de pago</ion-label>
-    <ion-select name="paymentType" [(ngModel)]="selectedPaymentType" required>
-      <ion-select-option *ngFor="let type of paymentTypes" [value]="type.id_type_pay">
-        {{ type.id_type_pay }} - {{ type.name }}
-      </ion-select-option>
-    </ion-select>
-  </ion-item>
-  
- 
   <div class="contenedor">
-    <div class="metodos">
-      <form (ngSubmit)="submitPaymentForm()" #paymentForm="ngForm">
+    <div class="header"></div>
+    <div class="main-content">
+      <div class="datos">
+        <h1>Tu Carrito de Compras</h1>
+        <p>Información de Tarjeta</p>
         <ion-item>
-          <ion-label position="floating">Nombre en la tarjeta</ion-label>
-          <ion-input name="cardName" ngModel required></ion-input>
+          <ion-label>Pago Express</ion-label>
+          <ion-select name="paymentType" [(ngModel)]="selectedPaymentType" required>
+            <ion-select-option *ngFor="let type of paymentTypes" [value]="type.id_type_pay">
+              {{ type.id_type_pay }} - {{ type.name }}
+            </ion-select-option>
+          </ion-select>
         </ion-item>
-
-        <ion-item>
-          <ion-label position="floating">Número de tarjeta</ion-label>
-          <ion-input name="cardNumber" ngModel required></ion-input>
-        </ion-item>
-
-        <ion-item>
-          <ion-label position="floating">Fecha de expiración (MM/YY)</ion-label>
-          <ion-input name="expiryDate" ngModel pattern="\d{2}/\d{2}" required></ion-input>
-        </ion-item>
-
-        <ion-item>
-          <ion-label position="floating">CVV</ion-label>
-          <ion-input name="cvv" ngModel pattern="\d{3,4}" required></ion-input>
-        </ion-item>
-
         
-      </form>
-    </div>
-
-   
-    <div class="carrito">
-      <div class="carrito-item" *ngFor="let item of carritoService.cartItems">
-      
-        <div class="carrito-item-detalles">
-          <img [src]="item.image" alt="" class="img-item">
-          <span class="titulo">{{item.name}}</span>
-          <div class="selector-cantidad">
-           
-            <p>Cantidad: </p>
-            <input type="text" [value]="item.quantity" class="carrito-item-cantidad" readonly>
-          </div>
-          <div>
-            <span class="carrito-item-precio">{{item.price * item.quantity | currency}}</span>
-          </div>
+        <form (ngSubmit)="submitPaymentForm()" #paymentForm="ngForm">
+          <ion-item>
+            <ion-label position="floating">Nombre en la tarjeta</ion-label>
+            <ion-input name="cardName" ngModel required></ion-input>
+          </ion-item>
+  
+          <ion-item>
+            <ion-label position="floating">Número de tarjeta</ion-label>
+            <ion-input name="cardNumber" ngModel required></ion-input>
+          </ion-item>
+  
+          <ion-item>
+            <ion-label position="floating">Fecha de expiración (MM/YY)</ion-label>
+            <ion-input name="expiryDate" ngModel pattern="\d{2}/\d{2}" required></ion-input>
+          </ion-item>
+  
+          <ion-item>
+            <ion-label position="floating">CVV</ion-label>
+            <ion-input name="cvv" ngModel pattern="\d{3,4}" required></ion-input>
+          </ion-item>
+        </form>
+        
+        <div class="icono">
+          <svg xmlns="http://www.w3.org/2000/svg" width="272" height="200" viewBox="0 0 272 200" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 37.5C0 27.5544 4.29856 18.0161 11.95 10.9835C19.6015 3.95088 29.9792 0 40.8 0H231.2C242.021 0 252.398 3.95088 260.05 10.9835C267.701 18.0161 272 27.5544 272 37.5V50H0V37.5ZM0 75V162.5C0 172.446 4.29856 181.984 11.95 189.017C19.6015 196.049 29.9792 200 40.8 200H231.2C242.021 200 252.398 196.049 260.05 189.017C267.701 181.984 272 172.446 272 162.5V75H0ZM68 100C64.3931 100 60.9338 101.317 58.3834 103.661C55.8329 106.005 54.4 109.185 54.4 112.5C54.4 115.815 55.8329 118.995 58.3834 121.339C60.9338 123.683 64.3931 125 68 125H136C139.607 125 143.066 123.683 145.617 121.339C148.167 118.995 149.6 115.815 149.6 112.5C149.6 109.185 148.167 106.005 145.617 103.661C143.066 101.317 139.607 100 136 100H68Z" fill="white"/>
+          </svg>
         </div>
       </div>
-
-     
-      <div class="carrito-total">
-        <div class="fila">
-          <span class="carrito-precio-total">
-            Su Total es {{ carritoService.getTotalPrice() | currency }}
-          </span>
+  
+      <div class="carrito">
+        <div class="carrito-item" *ngFor="let item of carritoService.cartItems">
+          <div class="carrito-item-detalles">
+            <img [src]="item.image" alt="" class="img-item">
+            <div class="info-producto">
+              <span class="titulo">{{item.name}}</span>
+              <div class="selector-cantidad">
+                <p>Cantidad: </p>
+                <input type="text" [value]="item.quantity" class="carrito-item-cantidad" readonly>
+              </div>
+              <span class="carrito-item-precio">{{item.price * item.quantity | currency}}</span>
+            </div>
+          </div>
         </div>
-        <ion-button (click)="submitPaymentForm()" (keydown)="handleKeyDown($event, submitPaymentForm)">Pagar</ion-button>
+        
+        <div class="carrito-total">
+          <div class="fila">
+            <span class="carrito-precio-total">
+              Su Total es {{ carritoService.getTotalPrice() | currency }}
+            </span>
+          </div>
+          <ion-button class="custom-button" expand="block" (click)="submitPaymentForm()" (keydown)="handleKeyDown($event, submitPaymentForm)">Pagar</ion-button>
+        </div>
       </div>
     </div>
   </div>
+  <app-footer></app-footer>
 </ion-content>
