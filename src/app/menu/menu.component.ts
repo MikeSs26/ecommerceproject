@@ -7,7 +7,9 @@ import { IonContent } from '@ionic/angular/standalone';
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss'],
   standalone: true,
-  imports: [CommonModule, IonicModule, IonContent]
+  imports: [CommonModule, 
+    IonicModule, 
+    IonContent]
 })
 export class MenuComponent {
   navigateTo(option: string) {
