@@ -1,8 +1,8 @@
-import { Component   } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { IonContent, IonBreadcrumbs, IonBreadcrumb, IonLabel, IonItem,IonButton, IonInput } from '@ionic/angular/standalone';
-import {CarritoService} from '../service/carrito.services';
+import { IonicModule } from '@ionic/angular';
+import { FormBuilder, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { CarritoService } from '../service/carrito.services';
 
 @Component({
   selector: 'app-pago',
@@ -12,28 +12,52 @@ import {CarritoService} from '../service/carrito.services';
   imports: [
     CommonModule,
     FormsModule,
-    IonContent, 
-    IonBreadcrumb,
-    IonItem, 
-    IonLabel, 
-    IonButton,
-    IonInput, 
-    IonBreadcrumbs
+    IonicModule, ReactiveFormsModule 
   ]
 })
-export class PagoPage {
-  constructor (public CarritoService: CarritoService) {}
+export class PagoPage implements OnInit {
+  paymentTypes: any[] = [];
+  selectedPaymentType: number = 0; // Inicializamos con un valor por defecto
+  paymentForm: any;
+  constructor(
+    public carritoService: CarritoService,
+    private formBuilder: FormBuilder // Inyectar FormBuilder
+  ) {
+    // Inicializar el formulario
+    this.paymentForm = this.formBuilder.group({
+      cardName: ['', Validators.required],
+      cardNumber: ['', Validators.required],
+      expiryDate: ['', [Validators.required, Validators.pattern('\\d{2}/\\d{2}')]],
+      cvv: ['', [Validators.required, Validators.pattern('\\d{3,4}')]],
+    });
+  }
 
+  ngOnInit() {
+    this.loadPaymentTypes();
+  }
+
+  async loadPaymentTypes() {
+    try {
+      this.paymentTypes = await this.carritoService.getPaymentTypes();
+    } catch (error) {
+      console.error('Error loading payment types:', error);
+    }
+  }
 
   submitPaymentForm() {
-    alert('Pago realizado con éxito :D');
-    this.CarritoService.clearCart();
-}
-
-handleKeyDown(event: KeyboardEvent, action: Function, ...args: any[]) {
-  if (event.key === 'Enter' || event.key === ' ') {
-    event.preventDefault();
-    action(...args);
+    if (this.selectedPaymentType !== 0) {
+      this.carritoService.submitPayment(this.selectedPaymentType);
+      this.paymentForm.reset(); // Resetear el formulario
+      this.selectedPaymentType = 0; // Reiniciar el tipo de pago seleccionado
+    } else {
+      console.error('Seleccione una forma de pago válida antes de continuar.');
+    }
   }
-}
+
+  handleKeyDown(event: KeyboardEvent, action: Function, ...args: any[]) {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      action(...args);
+    }
+  }
 }
