@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { FormBuilder, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CarritoService } from '../service/carrito.services';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-pago',
@@ -12,7 +13,9 @@ import { CarritoService } from '../service/carrito.services';
   imports: [
     CommonModule,
     FormsModule,
-    IonicModule, ReactiveFormsModule 
+    IonicModule, 
+    ReactiveFormsModule,
+    FooterComponent
   ]
 })
 export class PagoPage implements OnInit {
