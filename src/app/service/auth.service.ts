@@ -7,7 +7,8 @@ import axios from 'axios';
 })
 export class AuthService {
 
-  private apiUrl = 'http://localhost:8080/api/clients'; 
+  private apiUrl = 'http://localhost:8080/api/clients';
+
   constructor(private toastController: ToastController) { }
 
   async login(username: string, password: string): Promise<boolean> {
@@ -43,8 +44,8 @@ export class AuthService {
   async presentToast(message: string) {
     const toast = await this.toastController.create({
       message: message,
-      duration: 2000, 
-      position: 'bottom' 
+      duration: 2000,
+      position: 'bottom'
     });
     toast.present();
   }
@@ -56,5 +57,15 @@ export class AuthService {
 
   isAuthenticated(): boolean {
     return !!this.getCurrentUser();
+  }
+
+  async updateClient(client: any): Promise<void> {
+    try {
+      const url = `${this.apiUrl}/${client.id_client}`;
+      await axios.put(url, client);
+    } catch (error) {
+      console.error('Error al actualizar el cliente:', error);
+      throw new Error('Error al actualizar el cliente');
+    }
   }
 }
