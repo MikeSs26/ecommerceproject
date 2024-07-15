@@ -1,19 +1,20 @@
 
 <ion-content class="productos">
+  <div class="background">
+    <img src="../../assets/images/purple.jpg" alt="fondo2" class="background-img">
+  </div>
   <div class="contenedor">
     <div class="contenedor-item" *ngFor="let product of products">
       <div class="item">
-      
-        <a [routerLink]="['/product-detail', product.id_product]">
-          <div class="titulo">{{product.name}}</div>
-        </a>
         <div>
           <img [src]="product.image" alt="{{product.name}}" class="img-item">
         </div>
-        <div class="marca">{{product.brand.name}}</div>
+        <a [routerLink]="['/product-detail', product.id_product]">
+          <div class="titulo">{{product.name}}</div>
+        </a>
         <div class="precio">{{product.price | currency}}</div>
         <div>
-          <ion-button tabindex="0" (click)="CarritoService.addToCart(product)" (keydown)="handleKeyDown($event, CarritoService.addToCart, product)">Agregar al Carrito</ion-button>
+          <app-custom-button tabindex="0" (click)="CarritoService.addToCart(product)" (keydown)="handleKeyDown($event, CarritoService.addToCart, product)">Agregar al Carrito</app-custom-button>
         </div>
       </div>
     </div>

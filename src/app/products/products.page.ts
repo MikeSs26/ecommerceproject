@@ -6,6 +6,7 @@ import { Router,RouterLink } from '@angular/router';
 import axios from 'axios';
 import { CarritoService } from '../service/carrito.services';
 import { FooterComponent } from '../footer/footer.component';
+import { CustomButtonComponent } from '../custom-button/custom-button.component';
 
 interface Brand {
   id_brand: number;
@@ -38,7 +39,10 @@ interface ProductImage {
     CommonModule,
     FormsModule,
     IonButton,
-    IonIcon, FooterComponent, RouterLink
+    IonIcon, 
+    FooterComponent, 
+    RouterLink, 
+    CustomButtonComponent
   ]
 })
 export class ProductsPage {

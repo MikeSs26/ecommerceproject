@@ -1,11 +1,10 @@
 <ion-content>
   <div class="contenedor">
-    <div class="header">
-    </div>
+    <div class="header"></div>
     <div class="main-content">
       <div class="datos">
-      <h1>Tu Carrito de Compras</h1>
-      <p>Información de Tarjeta</p>
+        <h1>Tu Carrito de Compras</h1>
+        <p>Información de Tarjeta</p>
         <ion-item>
           <ion-label>Pago Express</ion-label>
           <ion-select name="paymentType" [(ngModel)]="selectedPaymentType" required>
@@ -48,12 +47,12 @@
         <div class="carrito-item" *ngFor="let item of carritoService.cartItems">
           <div class="carrito-item-detalles">
             <img [src]="item.image" alt="" class="img-item">
-            <span class="titulo">{{item.name}}</span>
-            <div class="selector-cantidad">
-              <p>Cantidad: </p>
-              <input type="text" [value]="item.quantity" class="carrito-item-cantidad" readonly>
-            </div>
-            <div>
+            <div class="info-producto">
+              <span class="titulo">{{item.name}}</span>
+              <div class="selector-cantidad">
+                <p>Cantidad: </p>
+                <input type="text" [value]="item.quantity" class="carrito-item-cantidad" readonly>
+              </div>
               <span class="carrito-item-precio">{{item.price * item.quantity | currency}}</span>
             </div>
           </div>
