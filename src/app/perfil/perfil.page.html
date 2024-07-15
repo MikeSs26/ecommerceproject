@@ -38,9 +38,9 @@
         <div class="form-icon-container">
           <img src="../../assets/images/loginuser.png" alt="Icono" class="form-icon">
         </div>
-        <ion-button expand="full" class="edit-button" (click)="enableEditing()" [disabled]="isEditing">Editar</ion-button>
-        <ion-button expand="full" class="save-button" (click)="saveChanges()" [disabled]="!isEditing || !changesMade()">Guardar</ion-button>
-        <ion-button expand="full" class="register-button" (click)="logout()">Cerrar Sesión</ion-button>
+        <app-custom-button expand="full" class="edit-button" (click)="enableEditing()" [disabled]="isEditing">Editar</app-custom-button>
+        <app-custom-button expand="full" class="save-button" (click)="saveChanges()" [disabled]="!isEditing || !changesMade()" [class.disabled]="!isEditing || !changesMade()">Guardar</app-custom-button>
+        <app-custom-button expand="full" class="register-button" (click)="logout()">Cerrar Sesión</app-custom-button>
       </div>
     </div>
   </div>
