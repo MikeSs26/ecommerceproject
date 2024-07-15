@@ -6,13 +6,15 @@ import { Router } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 import { FooterComponent } from '../footer/footer.component';
 import { HeaderComponent } from '../header/header.component';
+import { CustomButtonComponent } from '../custom-button/custom-button.component';
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.page.html',
   styleUrls: ['./register.page.scss'],
   standalone: true,
-  imports: [CommonModule, FormsModule, IonicModule , FooterComponent, HeaderComponent]
+  imports: [CommonModule, FormsModule, IonicModule , FooterComponent, 
+    HeaderComponent, CustomButtonComponent]
 })
 export class RegisterPage implements OnInit {
   name: string = '';

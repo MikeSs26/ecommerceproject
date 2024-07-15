@@ -39,13 +39,13 @@
               </ion-select-option>
             </ion-select>
           </ion-item>
-          <ion-button expand="full" type="submit" class="register-button">Registrar</ion-button>
+          <app-custom-button expand="full" type="submit" class="register-button">Registrar</app-custom-button>
           <ion-text class="error-message" color="danger" *ngIf="errorMessage">{{ errorMessage }}</ion-text>
           <ion-text class="success-message" color="success" *ngIf="successMessage">{{ successMessage }}</ion-text>
         </form>
         <div class="form-icon-container">
           <img src="../../assets/images/loginuser.png" alt="Icono" class="form-icon">
-          <ion-button class="perfil-button">Editar Foto de Perfil</ion-button>
+          <app-custom-button class="perfil-button">Editar Foto de Perfil</app-custom-button>
         </div>
       </div>
     </div>
