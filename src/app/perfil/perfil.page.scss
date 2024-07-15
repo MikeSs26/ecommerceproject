@@ -1,5 +1,6 @@
 ion-content {
-    --padding-top: 120px; 
+    --padding-top: 120px;
+     
   }
 
 .background {
@@ -13,21 +14,12 @@ ion-content {
     opacity: 0.8;
   }
   
-  .register-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; 
-    padding: 20px;
-    box-sizing: border-box;
-  }
   
   .form-box {
     width: 100%;
-    max-width: 800px; 
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
+    max-width: 100%; 
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 30px;
     border-radius: 20px; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     position: relative; 
@@ -98,4 +90,10 @@ ion-content {
         pointer-events: none; /* Deshabilita eventos de clic */
       }
     }
+    
+  }
+
+  .footer {
+    padding-top: 50px;
+
   }
