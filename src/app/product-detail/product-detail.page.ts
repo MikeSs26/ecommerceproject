@@ -1,4 +1,4 @@
-import { Component, OnInit, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Component, OnInit, CUSTOM_ELEMENTS_SCHEMA, ViewChild, AfterViewInit, ElementRef  } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
@@ -31,7 +31,8 @@ interface ProductImage {
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class ProductDetailPage implements OnInit {
+export class ProductDetailPage implements OnInit, AfterViewInit {
+  @ViewChild('slider') slider!: ElementRef<HTMLDivElement>;
   productId: string;
   product: any; 
   urlimages: ProductImage[] = [];
@@ -86,4 +87,18 @@ export class ProductDetailPage implements OnInit {
         return null;
       });
   }
+
+  ngAfterViewInit() {
+    this.slider.nativeElement.scrollLeft = 0;
+  }
+
+  navigateToSlide(index: number) {
+    const slideWidth = this.slider.nativeElement.clientWidth;
+    this.slider.nativeElement.scroll({
+      left: slideWidth * index,
+      behavior: 'smooth'
+    });
+  }
+
+
 }

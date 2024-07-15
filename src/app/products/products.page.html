@@ -49,7 +49,8 @@
         <div class="fila">
           <span class="carrito-precio-total">Su Total es {{ CarritoService.getTotalPrice() | currency }}</span>
         </div>
-        <ion-button (click)="checkout()" (keydown)="handleKeyDown($event, checkout)">Pagar</ion-button>
+        <app-custom-button (click)="checkout()" (keydown)="handleKeyDown($event, checkout)">Pagar</app-custom-button>
+
       </div>
     </div>
   </div>

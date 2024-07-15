@@ -1,10 +1,9 @@
-
 <ion-content>
-  <div class="ion-text-center ion-align-items-center ion-justify-content-center">
-    <div *ngFor="let image of urlimages" class="image">
-      <img [src]="image.url" alt="{{ product.name }}">
+  <div class="container">
+    <div class="image-container" *ngFor="let image of urlimages">
+      <img [src]="image.url" alt="{{ product.name }}" class="image">
     </div>
-    <ion-card *ngIf="product">
+    <ion-card *ngIf="product" class="card-container">
       <ion-card-header>
         <ion-card-title>{{ product.name }}</ion-card-title>
       </ion-card-header>
@@ -12,8 +11,7 @@
       <ion-card-content>
         <p class="precio"><strong>Precio:</strong> {{ product.price | currency }}</p>
         <p class="contenido"><strong>Marca:</strong> {{ product.brand.name }}</p>
-        <p><strong>Especificaciones:</strong> {{ product.especifications }}</p>
-       
+        <p class="contenido"><strong>Especificaciones:</strong> {{ product.especifications }}</p>
       </ion-card-content>
       <div>
         <app-custom-button tabindex="0" (click)="CarritoService.addToCart(product)" (keydown)="handleKeyDown($event, CarritoService.addToCart, product)">Agregar al Carrito</app-custom-button>
@@ -22,4 +20,3 @@
   </div>
   <app-footer></app-footer>
 </ion-content>
-
